@@ -1,8 +1,9 @@
 <template>
   <div>
-    <el-upload
+    <el-upload ref="my-upload"
       action="/api/filesystem/upload"
       list-type="picture-card"
+      name="multipartFile"
       :before-upload="setuploaddata"
       :on-success="handleSuccess"
       :file-list="fileList"
@@ -27,7 +28,7 @@
         dialogImageUrl: '',
         dialogVisible: false,
         fileList:[],
-        uploadval:{filetag:"course"},//上传提交的额外的数据 ，将uploadval转成key/value提交给服务器
+        uploadval:{fileTag:"course",businessKey:"businessKeyTest",metaData:'{"test":666}'},
         imgUrl:sysConfig.imgUrl
       }
     },
@@ -48,7 +49,6 @@
         return new Promise((resolve,rejct)=>{
           courseApi.deleteCoursePic(this.courseid).then(res=>{
             if(res.success){
-
                 //成功
               resolve()
             }else{
@@ -56,13 +56,12 @@
                 //失败
               rejct()
             }
-
           })
         })
-
       },
       //上传成功的钩子方法
       handleSuccess(response, file, fileList){
+        console.log("上传成功，进行后续操作")
         console.log(response)
 //        alert('上传成功')
         //调用课程管理的保存图片接口，将图片信息保存到课程管理数据库course_pic中
@@ -71,14 +70,15 @@
           let fileId = response.fileSystem.fileId;
           courseApi.addCoursePic(this.courseid,fileId).then(res=>{
               if(res.success){
-                  this.$message.success("上传图片")
+                  this.$message.success("图片上传成功")
               }else{
-                this.$message.error(res.message)
+                this.$message.error("图片保存失败!")
               }
-
           })
+        }else{
+          this.$message.error("图片上传失败!")
+          this.$refs['my-upload'].clearFiles();
         }
-
       },
       //上传失败执行的钩子方法
       handleError(err, file, fileList){
@@ -91,7 +91,6 @@
       //执行成功 resolve
       //执行失败 reject
       testPromise(i){
-
           return new Promise((resolve,reject)=>{
               if(i<2){
                   //成功了
@@ -114,7 +113,6 @@
               //将图片地址设置到
             this.fileList.push({name:'pic',url:imgUrl,fileId:res.pic})
           }
-
       })
       //测试调用promise方法，then中写的成功后的回调方法，
 //      this.testPromise(3).then(res=>{
