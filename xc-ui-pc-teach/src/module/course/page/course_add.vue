@@ -87,8 +87,8 @@
       save () {
           //处理课程分类
           // 选择课程分类存储到categoryActive
-           this.courseForm.mt=  this.categoryActive[0]//大分类
-           this.courseForm.st=  this.categoryActive[1]//小分类
+         this.courseForm.mt=  this.categoryActive[0]//大分类
+         this.courseForm.st=  this.categoryActive[1]//小分类
           courseApi.addCourseBase(this.courseForm).then(res=>{
               if(res.success){
                   this.$message.success("提交成功")
@@ -97,7 +97,6 @@
               }else{
                 this.$message.error(res.message)
               }
-
           })
       }
     },
@@ -109,18 +108,16 @@
       courseApi.category_findlist().then(res=>{
           this.categoryList = res.children;
           console.log(this.categoryList)
-
       })
 
       //查询数据字典
       //查询课程等级
       systemApi.sys_getDictionary("200").then(res=>{
-
+        console.log("查询课程等级",res)
         this.gradeList = res.dvalue;
       })
       //查询学习模式
       systemApi.sys_getDictionary("201").then(res=>{
-
         this.studymodelList = res.dvalue;
       })
 

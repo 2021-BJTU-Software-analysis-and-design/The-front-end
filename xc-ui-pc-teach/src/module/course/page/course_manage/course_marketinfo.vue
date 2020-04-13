@@ -70,7 +70,7 @@
         this.$refs.courseMarketForm.validate((valid) => {
           if (valid) {
             this.$confirm('确认提交吗？', '提示', {}).then(() => {
-              courseApi.updateCourseMarket(this.courseid,this.courseMarketForm).then((res) => {
+              courseApi.updateCoursemarket(this.courseid,this.courseMarketForm).then((res) => {
                this.editLoading = false;
                if(res.success){
                  this.$message.success('提交成功');

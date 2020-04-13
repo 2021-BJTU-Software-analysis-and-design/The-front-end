@@ -1,7 +1,7 @@
 <template>
   <section>
-    <el-row :gutter="20">
-      <el-col :span="8"  :offset=2 >
+    <el-row :gutter="20" >
+      <el-col :span="8"  :offset=2 style="margin-top: 20px" >
         <el-card :body-style="{ padding: '10px' }">
           <img src="/static/images/add.jpg" class="image" height="150px">
           <div style="padding: 10px;">
@@ -16,7 +16,7 @@
         </el-card>
       </el-col>
 
-      <el-col :span="8" v-for="(course, index) in courses" :key="course.id" :offset="index > 0 ? 2 : 2">
+      <el-col :span="8" v-for="(course, index) in courses" :key="course.id" :offset="index > 0 ? 2 : 2" style="margin-top: 20px">
         <el-card :body-style="{ padding: '10px' }">
           <img :src="course.pic!=null?imgUrl+course.pic:'/static/images/nonepic.jpg'" class="image" height="150px">
           <div style="padding: 10px;">
@@ -28,14 +28,28 @@
           </div>
         </el-card>
       </el-col>
-
       <!--分页-->
-      <el-col :span="24" class="toolbar">
-        <el-pagination background layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="size"
-                       :total="total" :current-page="page"
-                       style="float:right;">
-        </el-pagination>
-      </el-col>
+<!--      <el-col :span="24" class="toolbar">-->
+<!--        <el-pagination background layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="size"-->
+<!--                       :total="total" :current-page="page"-->
+<!--                       style="float:right;">-->
+<!--        </el-pagination>-->
+<!--      </el-col>-->
+
+    </el-row>
+    <!--分页工具栏-->
+    <el-row :gutter="20">
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :page-sizes="[5,10, 20, 30, 100]"
+        :current-page="this.page"
+        :page-size="this.size"
+        :total="this.total"
+        layout="total, sizes, prev, pager, next, jumper"
+        v-on:current-change="getCourse"
+        style="float:right;">
+      </el-pagination>
     </el-row>
   </section>
 </template>
@@ -66,9 +80,14 @@
       }
     },
     methods: {
-        //分页方法
+      //分页方法
       handleCurrentChange(val) {
         this.page = val;
+        this.getCourse();
+      },
+        //分页方法
+      handleSizeChange(val) {
+        this.size = val;
         this.getCourse();
       },
       //获取课程列表

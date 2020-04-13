@@ -3,7 +3,25 @@ import querystring from 'querystring'
 let sysConfig = require('@/../config/sysConfig')
 let apiUrl = sysConfig.xcApiUrlPre;
 
-//查询课程列表
+//获取课程营销信息
+export const getCourseMarketById = (id) =>{
+  return http.requestQuickGet(apiUrl + "/course/coursemarket/" + id)
+}
+
+//更新课程营销信息
+export const updateCoursemarket = (id,courseMarket) =>{
+  return http.requestPut(apiUrl + "/course/coursemarket/update/" + id,courseMarket)
+}
+
+//根据id查询课程信息
+export const getCoursebaseById = (id) =>{
+  return http.requestQuickGet(apiUrl + "/course/coursebase/" + id)
+}
+
+export const updateCoursebase = (id,courseInfo) =>{
+  return http.requestPut(apiUrl + "/course/coursebase/update/"+id,courseInfo)
+}
+
 //我的课程列表
 export const findCourseList = (page,size,params) => {
 //使用工具类将json对象转成key/value
@@ -15,6 +33,8 @@ export const findCourseList = (page,size,params) => {
 export const category_findlist= () => {
   return http.requestQuickGet(apiUrl+'/category/list')
 }
+
+
 /*添加课程基础信息*/
 export const addCourseBase = params => {
   return http.requestPost(apiUrl+'/course/coursebase/add',params)
@@ -34,7 +54,7 @@ export const addCoursePic= (courseId,pic) => {
 }
 //查询课程图片
 export const findCoursePicList = courseId => {
-  return http.requestQuickGet(apiUrl+'/course/coursepic/list/'+courseId)
+  return http.requestQuickGet(apiUrl+'/course/coursepic/get/'+courseId)
 }
 
 //删除课程图片
