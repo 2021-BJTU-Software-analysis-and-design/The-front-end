@@ -17,7 +17,11 @@
             <span>课程发布</span>
           </div>
           <div class="text item">
-            <div v-if="course.status == '202001'">
+            <div v-if="!course.status">
+              状态：未制作<br/>
+<!--              <el-button type="primary"  @click.native="this.$message.warning('课程页面还未制作')" >新课程发布</el-button>-->
+            </div>
+            <div v-else-if="course.status == '202001'">
               状态：制作中<br/>
               <el-button type="primary"  @click.native="publish" >新课程发布</el-button>
             </div>
@@ -63,6 +67,7 @@ export default{
           if(res.previewUrl){
             //预览url
             this.previewurl = res.previewUrl
+            this.getCourseView()
           }
         }else{
           this.$message.error(res.message);
@@ -74,7 +79,7 @@ export default{
       courseApi.publish(this.courseid).then(res=>{
           if(res.success){
               this.$message.success("发布成功，请点击下边的链接查询课程详情页面")
-
+              this.getCourseView()
           }else{
             this.$message.error(res.message)
           }
@@ -83,11 +88,10 @@ export default{
     },
     getCourseView(){
       courseApi.findCourseView(this.courseid).then(res=>{
-        if(res && res.courseBase){
+        if(res){
             //获取课程状态
-            this.course.status = res.courseBase.status;
+            this.course.status = res.status;
         }
-
       })
     }
 
