@@ -50,6 +50,7 @@
           "before-send":"beforeSend",
           "after-send-file":"afterSendFile"
         },{
+          // 文件开始上传前前端请求服务端准备上传工作。
           beforeSendFile:function(file) {
             // 创建一个deffered,用于通知是否完成操作
             var deferred = WebUploader.Deferred();
@@ -59,7 +60,6 @@
 
                 this.fileMd5 = val;
                 this.uploadFile = file;
-//                alert(this.fileMd5 )
                 //向服务端请求注册上传文件
                 $.ajax(
                   {
@@ -89,6 +89,8 @@
 
             return deferred.promise();
           }.bind(this),
+
+          // 上传分块前前端请求服务端校验分块是否存在。
           beforeSend:function(block) {
             var deferred = WebUploader.Deferred();
             // 每次上传分块前校验分块，如果已存在分块则不再上传，达到断点续传的目的
@@ -106,7 +108,7 @@
                 },
                 dataType:"json",
                 success:function(response) {
-                  if(response.ifExist) {
+                  if(response.fileExist) {
                     // 分块存在，跳过该分块
                     deferred.reject();
                   } else {
@@ -121,6 +123,8 @@
             this.uploader.options.formData.chunk = block.chunk;
             return deferred.promise();
           }.bind(this),
+
+          // 在所有分块上传完成后触发，可以请求服务端合并分块文件
           afterSendFile:function(file) {
             // 合并分块
             $.ajax(
@@ -147,6 +151,7 @@
           }.bind(this)
         }
       );
+
       // 创建uploader对象，配置参数
       this.uploader = WebUploader.create(
         {
@@ -170,9 +175,10 @@
 
         }.bind(this)
       );
+      
       //选择文件后触发
       this.uploader.on("beforeFileQueued", function(file) {
-//     this.uploader.removeFile(file)
+        //this.uploader.removeFile(file)
         //重置uploader
         this.uploader.reset()
         this.percentage = 0;
@@ -183,16 +189,19 @@
       this.uploader.on("uploadProgress", function(file, percentage) {
           this.percentage = Math.ceil(percentage * 100);
       }.bind(this));
+
       //上传失败触发
       this.uploader.on("uploadError", function(file,reason) {
         console.log(reason)
         alert("上传文件失败");
       });
+
       //上传成功触发
       this.uploader.on("uploadSuccess", function(file,response ) {
         console.log(response)
-//        alert("上传文件成功！");
+        // alert("上传文件成功！");
       });
+      
       //每个分块上传请求后触发
       this.uploader.on( 'uploadAccept', function( file, response ) {
           if(!(response && response.success)){//分块上传失败，返回false

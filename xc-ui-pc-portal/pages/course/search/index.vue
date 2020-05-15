@@ -157,6 +157,7 @@
             </div>
           </div>
 
+          <!-- 分页插件 -->
           <div style="text-align: center">
             <el-pagination
               background
@@ -263,7 +264,8 @@ export default {
     //请求搜索服务，搜索服务
     let course_data = await courseApi.search_course(page, 2, route.query);
     console.log(course_data);
-
+    let category_data = await courseApi.sysres_category();
+    console.log(category_data)
     if (course_data && course_data.queryResult) {
       let keywords = "";
       let mt = "";
@@ -283,9 +285,27 @@ export default {
       if (route.query.keyword) {
         keyword = route.query.keyword;
       }
+
+      //全部分类
+      let category = category_data.category; //分部分类
+      let first_category = category[0].children; //一级分类
+      let second_category = []; //二级分类
+
+      //遍历一级分类
+      for (var i in first_category) {
+        keywords += first_category[i].name + " ";
+        if (mt != "" && mt == first_category[i].id) {
+          //取出二级分类
+          second_category = first_category[i].children;
+          // console.log(second_category)
+          break;
+        }
+      }
       return {
         courselist: course_data.queryResult.list, //课程列表
         keywords: keywords,
+        first_category: first_category,
+        second_category: second_category,
         mt: mt,
         st: st,
         grade: grade,

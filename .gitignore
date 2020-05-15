@@ -8,6 +8,9 @@ yarn-error.log*
 /test/e2e/reports/
 selenium-debug.log
 
+# 排除媒体文件
+/video/*
+
 # Editor directories and files
 .idea
 .vscode
