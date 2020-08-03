@@ -16,3 +16,4 @@
 const getjwt = () => {
     return requestGet('/openapi/auth/userjwt');
 }
+

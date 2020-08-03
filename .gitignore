@@ -9,7 +9,7 @@ yarn-error.log*
 selenium-debug.log
 
 # 排除媒体文件
-/video/*
+xuecheng/video/*
 
 # Editor directories and files
 .idea

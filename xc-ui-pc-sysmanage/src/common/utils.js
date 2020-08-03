@@ -15,6 +15,29 @@ export default {
   //   let activeUserStr = this.getUserSession("activeUser");
   //   return JSON.parse(activeUserStr);
   // },
+  //解析jwt令牌，获取用户信息
+  setUserSession : function (key, value) {
+    return sessionStorage.setItem(key, value);
+  },
+  getUserInfoFromJwt : function (jwt) {
+    if(!jwt){
+      return ;
+    }
+    var jwtDecodeVal = jwtDecode(jwt);
+    if (!jwtDecodeVal) {
+      return ;
+    }
+    let activeUser={}
+    //console.log(jwtDecodeVal)
+    activeUser.utype = jwtDecodeVal.utype || '';
+    activeUser.username = jwtDecodeVal.name || '';
+    activeUser.userpic = jwtDecodeVal.userpic || '';
+    activeUser.userid = jwtDecodeVal.userid || '';
+    activeUser.authorities = jwtDecodeVal.authorities || '';
+    activeUser.uid = jwtDecodeVal.jti || '';
+    activeUser.jwt = jwt;
+    return activeUser;
+  },
   getActiveUser: function(){
     let uid = this.getCookie("uid")
     if(uid){

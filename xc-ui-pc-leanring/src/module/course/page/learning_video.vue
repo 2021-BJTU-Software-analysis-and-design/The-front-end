@@ -7,7 +7,7 @@
         <div class="course-cont-top-video" style="position: relative;">
           <div class="video-box">
             <div class="top text-center">
-             {{coursename}}
+              {{coursename}}
             </div>
             <div class="video text-center" style="padding-right: 55px;">
               <div class="video-mine">
@@ -499,25 +499,27 @@
                 </div>
               </div>
             </div>
+
+            <!--课程计划部分代码-->
             <div class="navCont">
               <div class="course-weeklist">
                 <div class="nav nav-stacked" v-for="(teachplan_first, index) in teachplanList">
                   <div class="tit nav-justified text-center"><i class="pull-left glyphicon glyphicon-th-list"></i>{{teachplan_first.pname}}<i class="pull-right"></i></div>
                   <li   v-if="teachplan_first.children!=null" v-for="(teachplan_second, index) in teachplan_first.children"><i class="glyphicon glyphicon-check"></i>
+                    <!--点击播放-->
                     <a :href="url" @click="study(teachplan_second.id)">
                       {{teachplan_second.pname}}
                     </a>
                   </li>
 
-                 <!-- <div class="tit nav-justified text-center"><i class="pull-left glyphicon glyphicon-th-list"></i>第一章<i class="pull-right"></i></div>
-                  <li  ><i class="glyphicon glyphicon-check"></i>
-                    <a :href="url" >
-                      第一节
-                    </a>
-                  </li>-->
+                  <!-- <div class="tit nav-justified text-center"><i class="pull-left glyphicon glyphicon-th-list"></i>第一章<i class="pull-right"></i></div>
+                   <li  ><i class="glyphicon glyphicon-check"></i>
+                     <a :href="url" >
+                       第一节
+                     </a>
+                   </li>-->
                   <!--<li><i class="glyphicon glyphicon-unchecked"></i>为什么分为A、B、C部分</li>-->
                 </div>
-
               </div>
             </div>
           </div>
@@ -533,6 +535,7 @@
   let sysConfig = require('@/../config/sysConfig')
   import * as courseApi from '../api/course'
   import * as systemApi from '@/base/api/system'
+  import merge from 'webpack-merge'
   import utilApi from '../../../common/utils';
 
 
@@ -559,35 +562,94 @@
     },
 
     methods: {
+      //取出第一个章节
+      getFirstTeachplan(){
+        for(var i=0;i<this.teachplanList.length;i++){
+          let firstTeachplan = this.teachplanList[i];
+          if(firstTeachplan.children && firstTeachplan.children.length>0){
+            let secondTeachplan = firstTeachplan.children[0];
+            return secondTeachplan.id;
+          }
+        }
+        return ;
+      },
       playvideo(video_src){
-        console.log(video_src)
+        console.log("即将播放 ",video_src)
         this.playerOptions.sources[0].src = video_src
         this.playerOptions.autoplay = true
       },
 
       //开始学习
       study(chapter){
+        var that = this
+        console.log("开始学习")
+        console.log("正在变更路由", chapter)
+        that.chapter = chapter
 
+        // this.$router.push({
+        //   query:merge(this.$route.query,{'chapter':  that.chapter})
+        // })
+
+        this.$router.push({name:"录播视频学习", params: {chapter: chapter}})
+        console.log("当前的path",this.$route.path)
+        this.$router.push({path:this.$route.path})
+        console.log("当前路由", this.$route)
+        console.log("参数修改完成")
+
+
+        //根据课程计划id获取已发布的课程媒资
+        courseApi.get_media(this.courseId,chapter).then((res) =>{
+          if (res.success){
+            //请求成功
+            let fileUrl = sysConfig.videoUrl + res.fileUrl
+            console.log("获取到的视频播放地址为 ",fileUrl)
+            this.playvideo(fileUrl)
+          }else if(res.message){
+            this.$message.error(res.message)
+          }else{
+            this.$message.error("视频播放失败")
+          }
+        })
       }
 
     },
     created(){
-        //当前请求的url
+      //当前请求的url
       this.url = window.location
       //课程id
       this.courseId = this.$route.params.courseId
       //章节id
       this.chapter = this.$route.params.chapter
-      //取出课程Id
+      //查询课程信息
       systemApi.course_view(this.courseId).then((view_course)=>{
+        if(!view_course || !view_course[this.courseId]){
+          this.$message.error("获取课程信息失败，请重新进入此页面！")
+          return ;
+        }
+        let courseInfo = view_course[this.courseId]
+        console.log(courseInfo)
+        this.coursename = courseInfo.name
+        if(courseInfo.teachplan){
+          console.log("准备开始播放视频")
+          let teachplan = JSON.parse(courseInfo.teachplan);
+          this.teachplanList = teachplan.children;
+          //开始学习
+          if(this.chapter == "0" || !this.chapter){
+             //取出第一个教学计划
+             this.chapter = this.getFirstTeachplan();
+             console.log("第一个教学计划id为 ",this.chapter);
+             this.study(this.chapter);
+          }else{
+            this.study(this.chapter);
+          }
 
-
+        }
       })
     },
     mounted() {
 
       //播放测试
-      this.playvideo("http://video.xuecheng.com/video/hls/lucene.m3u8")
+      // this.playvideo("http://video.xuecheng.com/video/hls/lucene.m3u8")
 //      this.playvideo("http://video.xuecheng.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
 
       $(function() {
@@ -1017,8 +1079,8 @@
     position: relative;
     display: unset;
     padding: 10px 15px;
-/*    color: #ebeef5;*/
+    /*    color: #ebeef5;*/
   }
-/*  .nav > li > a:hover { background-color:#00a4ff; }*/
+  /*  .nav > li > a:hover { background-color:#00a4ff; }*/
 
 </style>

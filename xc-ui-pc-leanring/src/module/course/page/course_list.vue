@@ -18,13 +18,14 @@
         <div class="col-lg-4 text-right">
           <a href="#" class="goLear"> 继续学习</a>
           <a href="#" class="evalu"> 课程评价</a>
-          <div class="aft" style="top:0px;right:0px;">● ● ●
+          <div class="aft" style="top:0px;right:0px;">
             <ul></ul>
           </div>
         </div>
         <div class="clearfix"></div>
       </div>
     </div>-->
+
     <div class="my-course">
       <div class="title">
         <div class="lab-title">全部课表</div>
@@ -78,12 +79,14 @@
 
       </div>
     </div>
+
     <div id="listcont">
       <li><a href="#">课程成绩</a></li>
       <li><a href="#">联系老师</a></li>
       <li><a href="#">课程延期</a></li>
       <li><a href="#">退出课程</a></li>
     </div>
+
   </div>
 </template>
 

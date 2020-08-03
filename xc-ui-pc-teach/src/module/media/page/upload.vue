@@ -14,7 +14,7 @@
   </div>
   <!--用来存放文件信息-->
   <div id="thelist" class="uploader-list" >
-    <div v-if="uploadFile.id" :id='uploadFile.id'><span>{{uploadFile.name}}</span>&nbsp;<span class='percentage'>{{percentage}}%</span></div>
+    <div v-if="uploadFile.id" :id='uploadFile.id'><span v-text="uploadFile.name"></span>&nbsp;<span class='percentage' v-text="percentage+'%'"></span></div>
 
   </div>
 </div>
@@ -43,13 +43,13 @@
       }
     },
     mounted(){
-//      var fileMd5;
-//      var uploadFile;
-      WebUploader.Uploader.register({
-          "before-send-file":"beforeSendFile",
-          "before-send":"beforeSend",
-          "after-send-file":"afterSendFile"
-        },{
+    //      var fileMd5;
+    //      var uploadFile;
+        WebUploader.Uploader.register({
+            "before-send-file":"beforeSendFile",
+            "before-send":"beforeSend",
+            "after-send-file":"afterSendFile"
+          },{
           // 文件开始上传前前端请求服务端准备上传工作。
           beforeSendFile:function(file) {
             // 创建一个deffered,用于通知是否完成操作
@@ -175,7 +175,7 @@
 
         }.bind(this)
       );
-      
+
       //选择文件后触发
       this.uploader.on("beforeFileQueued", function(file) {
         //this.uploader.removeFile(file)
@@ -188,6 +188,7 @@
       // percentage:代表上传文件的百分比
       this.uploader.on("uploadProgress", function(file, percentage) {
           this.percentage = Math.ceil(percentage * 100);
+          // console.log("当前进度 " + this.percentage)
       }.bind(this));
 
       //上传失败触发
@@ -201,7 +202,7 @@
         console.log(response)
         // alert("上传文件成功！");
       });
-      
+
       //每个分块上传请求后触发
       this.uploader.on( 'uploadAccept', function( file, response ) {
           if(!(response && response.success)){//分块上传失败，返回false

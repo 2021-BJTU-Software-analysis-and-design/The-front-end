@@ -35,9 +35,15 @@ export default {
           sessionStorage.removeItem('activeUser');
           this.$message('退出成功');
           this.logoutsuccess = true
-        }else{
+        }else if(res.code == 11111){
+          // 用户的登录信息已在redis过期
+          this.logoutsuccess = false
+          this.$message('用户凭证过期, 在这之前已经退出登陆');
+        } else{
           this.logoutsuccess = false
         }
+        //清空用户的缓存信息
+        sessionStorage.clear()
       },
       (res) => {
         this.logoutsuccess = false

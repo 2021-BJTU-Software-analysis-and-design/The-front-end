@@ -112,7 +112,7 @@
     methods: {
       //页面预览
       preview(pageId){
-        window.open("http://www.xuecheng.com/cms/preview/"+pageId)
+        window.open("http://xuecheng.com/cms/preview/"+pageId)
       },
 
       //触发分页参数变动
@@ -120,6 +120,7 @@
         this.params.size = val
         console.log(`每页 ${val} 条`);
       },
+
       handleCurrentChange(val) {
         this.params.page = val
         console.log(`当前页: ${val}`);

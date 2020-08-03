@@ -39,7 +39,7 @@
       </el-table-column>
       <el-table-column prop="uploadTime" label="创建时间" width="110" :formatter="formatCreatetime">
       </el-table-column>
-      <el-table-column label="开始处理" width="100" v-if="ischoose != true">
+      <el-table-column label="开始处理" width="" v-if="ischoose != true">
         <template slot-scope="scope">
           <el-button
             size="small" type="primary" plain @click="process(scope.row.fileId)">开始处理
@@ -68,6 +68,7 @@
   import utilApi from '@/common/utils';
   export default{
     props: ['ischoose'],
+    // 页面数据
     data(){
       return {
         params:{
@@ -83,6 +84,8 @@
         processStatusList:[]
       }
     },
+    
+    //方法
     methods:{
       formatCreatetime(row, column){
         var createTime = new Date(row.uploadTime);
@@ -139,10 +142,13 @@
         })
       }
     },
+
+    //页面初始化完成前钩子
     created(){
         //默认第一页
       this.params.page = Number.parseInt(this.$route.query.page||1);
     },
+    //页面初始化加载前的钩子
     mounted() {
       //默认查询页面
       this.query()

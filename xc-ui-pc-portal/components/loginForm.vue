@@ -12,7 +12,7 @@
                   <el-input v-model="loginForm.username" auto-complete="off" ></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="password">
-                  <el-input v-model="loginForm.password" auto-complete="off" ></el-input>
+                  <el-input type="password" v-model="loginForm.password" auto-complete="off" ></el-input>
                 </el-form-item>
                 <el-form-item >
                   <el-button type="primary"  @click.native="login" :loading="editLoading">登陆</el-button>

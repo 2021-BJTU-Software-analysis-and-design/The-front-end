@@ -14,14 +14,11 @@ export const sys_saveFileMetedata = params => {
 export const sys_deleteFile = params => {
   return http.requestPost('/filesystem/delete',params)
 }
-/*课程查询*/
-export const course_findByIds = ids => {
-  return http.requestGet('/openapi/search/course/getbase/'+ids);
-}
+
 export const course_view = id => {
-  // return http.requestGet('/openapi/portalview/course/get/'+id);
-  return http.requestGet('/openapi/search/course/getall/'+id);
+  return http.requestGet('/openapi/search/course/getdetail/'+id);
 }
+
 /*获取jwt令牌*/
 export const getjwt= () => {
   return http.requestQuickGet('/openapi/auth/userjwt')

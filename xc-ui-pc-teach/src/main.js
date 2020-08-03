@@ -51,6 +51,8 @@ const router = new VueRouter({
 
 
 router.beforeEach((to, from, next) => {
+
+  console.log("开启身份校验")
   if(openAuthenticate){
 
     // console.log(to)
@@ -81,11 +83,15 @@ router.beforeEach((to, from, next) => {
           next();
         }else{
           //跳转到统一登陆
-          window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
+          console.log("未登录")
+          Message.warning("请先登陆")
+          // window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
         }
       })
     }else{
       //跳转到统一登陆
+      console.log("未登录")
+      Message.warning("请先登陆")
       window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
     }
   }else{
@@ -118,6 +124,7 @@ router.beforeEach((to, from, next) => {
 import axios from 'axios'
 import { Message } from 'element-ui';
 
+
 // 添加请求拦截器，实现http请求添加Authorization头信息
 axios.interceptors.request.use(function (config) {
   // 在发送请求向header添加jwt
@@ -129,10 +136,11 @@ axios.interceptors.request.use(function (config) {
 }, function (error) {
   return Promise.reject(error);
 });
+
+
 // 响应拦截
-/*axios.interceptors.response.use(data => {
-  console.log("data=")
-  console.log(data)
+axios.interceptors.response.use(data => {
+  console.log("data=",data)
   if(data && data.data){
     if(data.data.code && data.data.code =='10001'){
       //需要登录
@@ -142,13 +150,17 @@ axios.interceptors.request.use(function (config) {
       // })
       window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
     }else if(data.data.code && data.data.code =='10002'){
-      Message.error('您没有此操作的权限，请与客服联系！');
+      Message.error('您没有权限操作该选项');
+      return
     }else if(data.data.code && data.data.code =='10003'){
       Message.error('认证被拒绝，请重新登录重试！');
+      return
     }
   }
   return data
-})*/
+})
+
+
 /*
  //axios请求超时设置
 axios.defaults.retry = 2;

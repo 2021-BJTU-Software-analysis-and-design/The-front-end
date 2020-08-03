@@ -22,7 +22,7 @@
             <a href="#" class="personal">购物车</a>-->
             <router-link :to="{path: '/'}">我的学习</router-link>
             <a href="javascript:;" @click="logout" v-if="logined == true">退出</a>
-            <a href="javascript:;" @click="showlogin" v-if="logined == false">登陆|注册</a>
+            <a href="javascript:;" @click="showlogin" v-if="logined == false">登陆&nbsp;|&nbsp;注册</a>
 
           </div>
           <div class="starch">
@@ -79,9 +79,10 @@
           //this.showlogin()
         }
       },
-      showlogin:function(){
-        this.returnUrl = window.location;
-        this.LoginFormVisible = true;
+      showlogin: function(){
+        //this.loginFormVisible = true;
+        window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+
+          Base64.encode(window.location)
       }
     },
     mounted() {
