@@ -19,13 +19,54 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d056e37f-5b97-403f-a1c0-734298fb3e1f" name="Default Changelist" comment="mark">
+    <list default="true" id="d056e37f-5b97-403f-a1c0-734298fb3e1f" name="Default Changelist" comment="Merge remote-tracking branch 'origin/patch-1'">
+      <change afterPath="$PROJECT_DIR$/static/category/category.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/company/company_info_template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/297e7c7c62b888f00162b8a7dec20000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/297e7c7c62b888f00162b8a965510001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/297e7c7c62b8aa9d0162b8ab13910000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/297e7c7c62b8aa9d0162b8ab56ba0001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/40281f81640220d601640222665b0001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/402885816243d2dd016243f24c030002.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/4028858162e0bc0a0162e0bfdf1a0000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/4028e581617f945f01617f9dabc40000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/4028e58161bcf7f40161bcf8b77c0000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/4028e58161bd22e60161bd23672a0001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/4028e58161bd3b380161bd3bcd2f0000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/course_main_template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/detail/test1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/297e7c7c62b8aa9d0162b8ab56ba0001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/402885816243d2dd016243f24c030002.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/4028e581617f945f01617f9dabc40000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_123.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_297e7c7c62b888f00162b8a7dec20000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_297e7c7c62b888f00162b8a965510001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_297e7c7c62b8aa9d0162b8ab13910000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_402885816243d2dd016243f24c030002.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_4028858162e0bc0a0162e0bfdf1a0000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_4028e581617f945f01617f9dabc40000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_4028e58161bd22e60161bd23672a0001.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/course/preview/preview_4028e58161bd3b380161bd3bcd2f0000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/stat/company/company_stat_template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/stat/course/course_stat_297e7c7c62b888f00162b8a7dec20000.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/stat/course/course_stat_4028e581617f945f01617f9dabc40000.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/stat/course/course_stat_template(1).json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/teacher/teacher_info_template01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/teacher/teacher_info_template02.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc-ui-pc-static-portal/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/xc-ui-pc-static-portal/include/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,7 +80,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/online_project_wangqing/build" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,7 +90,24 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebStorm\WebHomework\The-front-end\online_project_wangqing\build" />
+      <recent name="D:\WebStorm\WebHomework\The-front-end\online_project_wangqing\config" />
+      <recent name="D:\WebStorm\WebHomework\The-front-end" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.serve">
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/online_project_wangqing/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/xc-ui-pc-teach/package.json" />
       <command value="start" />
@@ -57,6 +115,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.serve" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,6 +136,7 @@
       <workItem from="1618907978541" duration="1837000" />
       <workItem from="1618979086466" duration="3069000" />
       <workItem from="1622943244962" duration="432000" />
+      <workItem from="1622943696641" duration="3691000" />
     </task>
     <task id="LOCAL-00001" summary="mark">
       <created>1622943491808</created>
@@ -77,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622943491808</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge remote-tracking branch 'origin/patch-1'">
+      <created>1622943931679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622943931679</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,44 +168,55 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mark" />
-    <option name="LAST_COMMIT_MESSAGE" value="mark" />
+    <MESSAGE value="mark2" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/patch-1'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/patch-1'" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="176" y="116" width="1089" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618981803196">
+    <state x="176" y="109" width="1089" height="811" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622947419589">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="176" y="116" width="1089" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1618981803196" />
+    <state x="176" y="109" width="1089" height="811" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1622947419589" />
+    <state x="471" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622945543679">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="471" y="261" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.920@0.0.1440.920" timestamp="1622945543679" />
     <state x="501" y="202" key="FileChooserDialogImpl" timestamp="1622943283411">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="501" y="202" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1622943283411" />
-    <state width="1419" height="242" key="GridCell.Tab.0.bottom" timestamp="1618982097161">
+    <state width="1419" height="242" key="GridCell.Tab.0.bottom" timestamp="1622947409704">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1618982097161" />
-    <state width="1419" height="242" key="GridCell.Tab.0.center" timestamp="1618982097161">
+    <state width="1419" height="242" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1622947409704" />
+    <state width="1419" height="242" key="GridCell.Tab.0.center" timestamp="1622947409704">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1618982097161" />
-    <state width="1419" height="242" key="GridCell.Tab.0.left" timestamp="1618982097161">
+    <state width="1419" height="242" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1622947409704" />
+    <state width="1419" height="242" key="GridCell.Tab.0.left" timestamp="1622947409704">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1618982097161" />
-    <state width="1419" height="242" key="GridCell.Tab.0.right" timestamp="1618982097161">
+    <state width="1419" height="242" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1622947409704" />
+    <state width="1419" height="242" key="GridCell.Tab.0.right" timestamp="1622947409704">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1618982097161" />
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1622943665490">
+    <state width="1419" height="242" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1622947409704" />
+    <state x="496" y="181" key="RollbackChangesDialog" timestamp="1622943804935">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1622943665490" />
-    <state x="419" y="163" width="603" height="594" key="find.popup" timestamp="1618982083273">
+    <state x="496" y="181" key="RollbackChangesDialog/0.0.1440.920@0.0.1440.920" timestamp="1622943804935" />
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2" timestamp="1622944057044">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="419" y="163" width="603" height="594" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1618982083273" />
+    <state x="313" y="194" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1622944057044" />
+    <state x="419" y="163" width="603" height="594" key="find.popup" timestamp="1622945364619">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="419" y="163" width="603" height="594" key="find.popup/0.0.1440.920@0.0.1440.920" timestamp="1622945364619" />
     <state x="511" y="360" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618981791857">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
