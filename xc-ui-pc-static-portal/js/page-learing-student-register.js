@@ -14,7 +14,7 @@ $(window).resize(function() {
   minHeight();
 });
 /*发送验证码*/
-$('.send').click(function(){
+$('.send'). (function(){
     var time;
     var num = 60;
     if($(this).text() == "发送验证码"){

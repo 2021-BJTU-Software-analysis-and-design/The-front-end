@@ -4,7 +4,7 @@
     <div class="learingHeader">
       <nav class="navbar">
         <div class="">
-          <div class="logo"><img src="/static/images/asset-logoIco.png" width="100%" alt=""></div>
+          <div class="logo"><img src="/static/img/asset-logoIco.png" width="100%" alt=""></div>
           <div class="nav-list">
             <ul class="nav navbar-nav">
               <li ><a href="http://www.xuecheng.com/">首页</a></li>
@@ -35,59 +35,57 @@
   </header>
 </template>
 <script type="text/javascript">
-
   import utilApi from '../../common/utils'
   import * as loginApi from '../../module/home/api/home'
   export default {
-    components:{
+    components: {
 
     },
-    data() {
+    data () {
       return {
-        keyword:'',
-        LoginFormVisible:false,
-        logined:false
+        keyword: '',
+        LoginFormVisible: false,
+        logined: false
       }
     },
     methods: {
-      search() {
+      search () {
         if (this.keyword === '') {
-          window.location = "http://www.xuecheng.com/course/search"
+          window.location = 'http://www.xuecheng.com/course/search'
         } else {
           let keyword = encodeURIComponent(this.keyword)
-          window.location = "http://www.xuecheng.com/course/search?keyword="+keyword
+          window.location = 'http://www.xuecheng.com/course/search?keyword=' + keyword
         }
       },
-      //退出登录
+      // 退出登录
       logout: function () {
         this.$confirm('确认退出吗?', '提示', {
         }).then(() => {
-          //跳转到统一登陆
+          // 跳转到统一登陆
           this.$router.push({ path: '/logout'})
         }).catch(() => {
 
-        });
+        })
       },
-      refresh_user:function(){
-        let activeUser= utilApi.getActiveUser();
+      refresh_user: function () {
+        let activeUser = utilApi.getActiveUser()
 
-        if(activeUser){
+        if (activeUser) {
           this.logined = true
-          this.user = activeUser;
-          //console.log(this.user.username)
-        }else{
-          //this.showlogin()
+          this.user = activeUser
+        // console.log(this.user.username)
+        } else {
+          // this.showlogin()
         }
       },
-      showlogin: function(){
-        //this.loginFormVisible = true;
-        window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+
+      showlogin: function () {
+        // this.loginFormVisible = true;
+        window.location = 'http://ucenter.xuecheng.com/#/login?returnUrl=' +
           Base64.encode(window.location)
       }
     },
-    mounted() {
+    mounted () {
       this.refresh_user()
-
     }
   }
 </script>

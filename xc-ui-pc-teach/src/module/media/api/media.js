@@ -10,3 +10,7 @@ export const media_list = (page,size,params) => {
   let querys = querystring.stringify(params)
   return http.requestQuickGet(apiUrl+'/media/file/list/'+page+'/'+size+'/?'+querys)
 }
+
+export const media_process = ( id ) => {
+  return http.requestGet(apiUrl+'/media/file/process/'+id)
+}

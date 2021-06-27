@@ -1,80 +1,89 @@
 import http from './../../../base/api/public'
 import querystring from 'querystring'
 let sysConfig = require('@/../config/sysConfig')
-let apiUrl = sysConfig.xcApiUrlPre;
+let apiUrl = sysConfig.xcApiUrlPre
 
-//获取课程营销信息
-export const getCourseMarketById = (id) =>{
-  return http.requestQuickGet(apiUrl + "/course/coursemarket/" + id)
+// 获取课程营销信息
+export const getCourseMarketById = (id) => {
+  return http.requestQuickGet(apiUrl + '/course/coursemarket/' + id)
 }
 
-//更新课程营销信息
-export const updateCoursemarket = (id,courseMarket) =>{
-  return http.requestPut(apiUrl + "/course/coursemarket/update/" + id,courseMarket)
+// 更新课程营销信息
+export const updateCoursemarket = (id, courseMarket) => {
+  return http.requestPut(apiUrl + '/course/coursemarket/update/' + id, courseMarket)
 }
 
-//根据id查询课程信息
-export const getCoursebaseById = (id) =>{
-  return http.requestQuickGet(apiUrl + "/course/coursebase/" + id)
+// 根据id查询课程信息
+export const getCoursebaseById = (id) => {
+  return http.requestQuickGet(apiUrl + '/course/coursebase/' + id)
 }
 
-export const updateCoursebase = (id,courseInfo) =>{
-  return http.requestPut(apiUrl + "/course/coursebase/update/"+id,courseInfo)
+export const updateCoursebase = (id, courseInfo) => {
+  return http.requestPut(apiUrl + '/course/coursebase/update/' + id, courseInfo)
 }
 
-//我的课程列表
-export const findCourseList = (page,size,params) => {
-//使用工具类将json对象转成key/value
+// 我的课程列表
+export const findCourseList = (page, size, params) => {
+// 使用工具类将json对象转成key/value
   let queries = querystring.stringify(params)
-  return http.requestQuickGet(apiUrl+"/course/coursebase/company/list/"+page+"/"+size+"?"+queries)
+  return http.requestQuickGet(apiUrl + '/course/coursebase/company/list/' + page + '/' + size + '?' + queries)
 }
 
-//查询课程分类
-export const category_findlist= () => {
-  return http.requestQuickGet(apiUrl+'/category/list')
+// 查询课程分类
+export const categoryFindlist = () => {
+  return http.requestQuickGet(apiUrl + '/course/category/list')
 }
 
-
-/*添加课程基础信息*/
+/* 添加课程基础信息 */
 export const addCourseBase = params => {
-  return http.requestPost(apiUrl+'/course/coursebase/add',params)
+  return http.requestPost(apiUrl + '/course/coursebase/add', params)
 }
-/*查询课程计划*/
+/* 查询课程计划 */
 export const findTeachplanList = courseid => {
-  return http.requestQuickGet(apiUrl+'/course/teachplan/list/'+courseid)
+  return http.requestQuickGet(apiUrl + '/course/teachplan/list/' + courseid)
 }
-/*添加课程计划*/
+
+export const findTeachplan = planid => {
+  return http.requestQuickGet(apiUrl + '/course/teachplan/get/' + planid)
+}
+
+/* 添加课程计划 */
 export const addTeachplan = teachplah => {
-  return http.requestPost(apiUrl+'/course/teachplan/add',teachplah)
+  return http.requestPost(apiUrl + '/course/teachplan/add', teachplah)
 }
 
-//保存课程图片地址到课程数据 库
-export const addCoursePic= (courseId,pic) => {
-  return http.requestPost(apiUrl+'/course/coursepic/add?courseId='+courseId+"&pic="+pic)
+// 删除课程计划
+export const deleteTeachplan = id => {
+  return http.requestGet(apiUrl + '/course/teachplan/delete/' + id)
 }
-//查询课程图片
+
+// 保存课程图片地址到课程数据 库
+export const addCoursePic = (courseId, pic) => {
+  return http.requestPost(apiUrl + '/course/coursepic/add?courseId=' + courseId + '&pic=' + pic)
+}
+// 查询课程图片
 export const findCoursePicList = courseId => {
-  return http.requestQuickGet(apiUrl+'/course/coursepic/get/'+courseId)
+  return http.requestQuickGet(apiUrl + '/course/coursepic/get/' + courseId)
 }
 
-//删除课程图片
-export const deleteCoursePic= courseId => {
-  return http.requestDelete(apiUrl+'/course/coursepic/delete?courseId='+courseId)
+// 删除课程图片
+export const deleteCoursePic = courseId => {
+  return http.requestDelete(apiUrl + '/course/coursepic/delete?courseId=' + courseId)
 }
-/*预览课程*/
+/* 预览课程 */
 export const preview = id => {
-  return http.requestPost(apiUrl+'/course/preview/'+id);
+  return http.requestPost(apiUrl + '/course/preview/' + id)
 }
-/*发布课程*/
+/* 发布课程 */
 export const publish = id => {
-  return http.requestPost(apiUrl+'/course/publish/'+id);
+  return http.requestPost(apiUrl + '/course/publish/' + id)
 }
-//查询课程信息
+// 查询课程信息
 export const findCourseView = courseId => {
-  return http.requestQuickGet(apiUrl+'/course/coursebase/'+courseId)
+  return http.requestQuickGet(apiUrl + '/course/coursebase/' + courseId)
 }
 
-/*保存媒资信息*/
+/* 保存媒资信息 */
 export const savemedia = teachplanMedia => {
-  return http.requestPost(apiUrl+'/course/savemedia',teachplanMedia);
+  return http.requestPost(apiUrl + '/course/savemedia', teachplanMedia)
 }

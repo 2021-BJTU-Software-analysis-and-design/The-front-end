@@ -84,7 +84,7 @@
         processStatusList:[]
       }
     },
-    
+
     //方法
     methods:{
       formatCreatetime(row, column){
@@ -129,7 +129,9 @@
           console.log(res)
          if(res.success){
            this.$message.success('开始处理，请稍后查看处理结果');
-         }else{
+         }if(res.code === 303001){
+            this.$message.success('正在处理中，请稍后查看处理结果');
+          }else{
            this.$message.error('操作失败，请刷新页面重试');
          }
         })

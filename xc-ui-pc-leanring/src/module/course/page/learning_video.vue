@@ -32,6 +32,7 @@
                 <li class="lab-com"><a :href="url" class="glyphicon glyphicon-duplicate"><span>评论</span></a></li>
               </div>
             </div>
+
             <div class="note">
               <div class="note-box">
                 <div class="note-lab"><span class="active">我的笔记</span><span>精选笔记</span></div>
@@ -51,119 +52,11 @@
                           <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
                         </div>
                       </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
                     </ul>
                     <a :href="url" class="more">查看更多</a>
                   </div>
                   <div class="sel-note">
                     <ul class="my-item-box">
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
                       <li>
                         <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
                         <div class="cont">
@@ -200,150 +93,12 @@
                           <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
                         </div>
                       </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
+
                     </ul>
                     <a :href="url" class="more">查看更多</a>
                   </div>
                   <div class="sel-note">
                     <ul class="my-item-box">
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
                       <li>
                         <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
                         <div class="tit">这个是我想问的问题</div>
@@ -385,96 +140,6 @@
                     <!--<div class="info"><span class="pic" onclick="screenshot()">截图 </span><span class="not-but">保存</span></div>-->
                     <!--</div>-->
                     <ul class="my-item-box">
-                      <li>
-                        <div>
-                          <span><img src="/static/images/asset-vid.png" alt=""></span>
-                          <span class="name">王老师</span>
-                          <div class="item-rit">
-                            <div class="star-show">
-                              <div class="score"><i>4</i></div>
-                            </div>
-                            <div class="showSt">评分 <span>5星</span></div>
-                          </div>
-                        </div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-23</span>
-                          <div class="oper-box"></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <span><img src="/static/images/asset-vid.png" alt=""></span>
-                          <span class="name">王老师</span>
-                          <div class="item-rit">
-                            <div class="star-show">
-                              <div class="score"><i>4</i></div>
-                            </div>
-                            <div class="showSt">评分 <span>5星</span></div>
-                          </div>
-                        </div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-23</span>
-                          <div class="oper-box"></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <span><img src="/static/images/asset-vid.png" alt=""></span>
-                          <span class="name">王老师</span>
-                          <div class="item-rit">
-                            <div class="star-show">
-                              <div class="score"><i>4</i></div>
-                            </div>
-                            <div class="showSt">评分 <span>5星</span></div>
-                          </div>
-                        </div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-23</span>
-                          <div class="oper-box"></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <span><img src="/static/images/asset-vid.png" alt=""></span>
-                          <span class="name">王老师</span>
-                          <div class="item-rit">
-                            <div class="star-show">
-                              <div class="score"><i>4</i></div>
-                            </div>
-                            <div class="showSt">评分 <span>5星</span></div>
-                          </div>
-                        </div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-23</span>
-                          <div class="oper-box"></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <span><img src="/static/images/asset-vid.png" alt=""></span>
-                          <span class="name">王老师</span>
-                          <div class="item-rit">
-                            <div class="star-show">
-                              <div class="score"><i>4</i></div>
-                            </div>
-                            <div class="showSt">评分 <span>5星</span></div>
-                          </div>
-                        </div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-23</span>
-                          <div class="oper-box"></div>
-                        </div>
-                      </li>
                       <li>
                         <div>
                           <span><img src="/static/images/asset-vid.png" alt=""></span>
@@ -535,125 +200,118 @@
   let sysConfig = require('@/../config/sysConfig')
   import * as courseApi from '../api/course'
   import * as systemApi from '@/base/api/system'
-  import merge from 'webpack-merge'
-  import utilApi from '../../../common/utils';
 
-
-  export default {
+export default {
     components: {},
-    data() {
+    data () {
       return {
-        url:'',//当前url
-        courseId:'',//课程id
-        chapter:'',//章节Id
-        coursename:'课程名称',//课程名称
-        coursepic:'',//课程图片
-        teachplanList:[],//课程计划
-        playerOptions: {//播放参数
+        url: '', // 当前url
+        courseId: '', // 课程id
+        chapter: '', // 章节Id
+        coursename: '课程名称', // 课程名称
+        coursepic: '', // 课程图片
+        teachplanList: [], // 课程计划
+        playerOptions: {// 播放参数
           autoplay: false,
           controls: true,
           sources: [{
-            type: "application/x-mpegURL",
+            type: 'application/x-mpegURL',
             src: ''
           }]
-        },
+        }
 
       }
     },
 
     methods: {
-      //取出第一个章节
-      getFirstTeachplan(){
-        for(var i=0;i<this.teachplanList.length;i++){
-          let firstTeachplan = this.teachplanList[i];
-          if(firstTeachplan.children && firstTeachplan.children.length>0){
-            let secondTeachplan = firstTeachplan.children[0];
-            return secondTeachplan.id;
+      // 取出第一个章节
+      getFirstTeachplan () {
+        for (var i = 0; i < this.teachplanList.length; i++) {
+          let firstTeachplan = this.teachplanList[i]
+          if (firstTeachplan.children && firstTeachplan.children.length > 0) {
+            let secondTeachplan = firstTeachplan.children[0]
+            return secondTeachplan.id
           }
         }
-        return ;
-      },
-      playvideo(video_src){
-        console.log("即将播放 ",video_src)
+  },
+      playvideo (video_src) {
+        console.log('即将播放 ', video_src)
         this.playerOptions.sources[0].src = video_src
         this.playerOptions.autoplay = true
       },
 
-      //开始学习
-      study(chapter){
+      // 开始学习
+      study (chapter) {
         var that = this
-        console.log("开始学习")
-        console.log("正在变更路由", chapter)
+        console.log('开始学习')
+        console.log('正在变更路由', chapter)
         that.chapter = chapter
 
         // this.$router.push({
         //   query:merge(this.$route.query,{'chapter':  that.chapter})
         // })
 
-        this.$router.push({name:"录播视频学习", params: {chapter: chapter}})
-        console.log("当前的path",this.$route.path)
-        this.$router.push({path:this.$route.path})
-        console.log("当前路由", this.$route)
-        console.log("参数修改完成")
+        this.$router.push({name: '录播视频学习', params: {chapter: chapter}})
+        console.log('当前的path', this.$route.path)
+        this.$router.push({path: this.$route.path})
+        console.log('当前路由', this.$route)
+        console.log('参数修改完成')
 
-
-        //根据课程计划id获取已发布的课程媒资
-        courseApi.get_media(this.courseId,chapter).then((res) =>{
-          if (res.success){
-            //请求成功
+        // 根据课程计划id获取已发布的课程媒资
+        courseApi.get_media(this.courseId, chapter).then((res) => {
+          if (res.success) {
+            // 请求成功
             let fileUrl = sysConfig.videoUrl + res.fileUrl
-            console.log("获取到的视频播放地址为 ",fileUrl)
+            console.log('获取到的视频播放地址为 ', fileUrl)
             this.playvideo(fileUrl)
-          }else if(res.message){
+          } else if (res.message) {
             this.$message.error(res.message)
-          }else{
-            this.$message.error("视频播放失败")
+          } else {
+            this.$message.error('视频播放失败')
           }
         })
       }
 
     },
-    created(){
-      //当前请求的url
+    created () {
+      // 当前请求的url
       this.url = window.location
-      //课程id
+      // 课程id
       this.courseId = this.$route.params.courseId
-      //章节id
+      // 章节id
       this.chapter = this.$route.params.chapter
-      //查询课程信息
-      systemApi.course_view(this.courseId).then((view_course)=>{
-        if(!view_course || !view_course[this.courseId]){
-          this.$message.error("获取课程信息失败，请重新进入此页面！")
-          return ;
+      // 查询课程信息
+      systemApi.course_view(this.courseId).then((view_course) => {
+        if (!view_course || !view_course[this.courseId]) {
+          this.$message.error('获取课程信息失败，请重新进入此页面！')
+          return
         }
         let courseInfo = view_course[this.courseId]
         console.log(courseInfo)
         this.coursename = courseInfo.name
-        if(courseInfo.teachplan){
-          console.log("准备开始播放视频")
-          let teachplan = JSON.parse(courseInfo.teachplan);
-          this.teachplanList = teachplan.children;
-          //开始学习
-          if(this.chapter == "0" || !this.chapter){
-             //取出第一个教学计划
-             this.chapter = this.getFirstTeachplan();
-             console.log("第一个教学计划id为 ",this.chapter);
-             this.study(this.chapter);
-          }else{
-            this.study(this.chapter);
+        if (courseInfo.teachplan) {
+          console.log('准备开始播放视频')
+          let teachplan = JSON.parse(courseInfo.teachplan)
+          this.teachplanList = teachplan.children
+        // 开始学习
+          if (this.chapter == '0' || !this.chapter) {
+             // 取出第一个教学计划
+            this.chapter = this.getFirstTeachplan()
+            console.log('第一个教学计划id为 ', this.chapter)
+            this.study(this.chapter)
+          } else {
+            this.study(this.chapter)
           }
-
         }
       })
     },
-    mounted() {
-
-      //播放测试
+    mounted () {
+      // 播放测试
       // this.playvideo("http://video.xuecheng.com/video/hls/lucene.m3u8")
-//      this.playvideo("http://video.xuecheng.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
+      // this.playvideo('http://video.xuecheng.com/video/c/5/c5c75d70f382e6016d2f506d134eee11/hls/c5c75d70f382e6016d2f506d134eee11.m3u8')
 
-      $(function() {
-        $('.active-box span').click(function() {
+      $(function () {
+        $('.active-box span').click(function () {
           $(this).css({
             'color': '#00a4ff'
           })
@@ -663,7 +321,7 @@
             $(this).find('.i-coll').css('background-position', '1px -75px')
           }
         })
-        $('.learing-box .item-list').mouseover(function(e) {
+        $('.learing-box .item-list').mouseover(function (e) {
           $(this).css({
             'height': '140px'
           }).addClass('hov').siblings().css({
@@ -671,7 +329,7 @@
           })
           $(this).siblings().removeClass('hov')
         })
-        $('.learing-box .item-box').mouseout(function() {
+        $('.learing-box .item-box').mouseout(function () {
           $(this).find('.item-list:first').css({
             'height': '140px'
           }).addClass('hov')
@@ -681,9 +339,8 @@
         })
       })
 
-
-      $(function() {
-        $('.learing-box .item-list').mouseover(function(e) {
+      $(function () {
+        $('.learing-box .item-list').mouseover(function (e) {
           $(this).css({
             'height': '140px'
           }).addClass('hov').siblings().css({
@@ -691,7 +348,7 @@
           })
           $(this).siblings().removeClass('hov')
         })
-        $('.learing-box .item-box').mouseout(function() {
+        $('.learing-box .item-box').mouseout(function () {
           $(this).find('.item-list:first').css({
             'height': '140px'
           }).addClass('hov')
@@ -701,24 +358,24 @@
         })
       })
 
-      $(function() {
-        //代码点击显示
-        $(".item .item-left").click(function() {
-          var pre = $(this).parent();
+      $(function () {
+        // 代码点击显示
+        $('.item .item-left').click(function () {
+          var pre = $(this).parent()
           if (!pre.find('pre').hasClass('code-pop')) {
-            pre.find('pre').addClass('code-pop');
+            pre.find('pre').addClass('code-pop')
             pre.find('.mask,pre').css('display', 'block')
           } else {
-            pre.find('pre').removeClass('code-pop');
+            pre.find('pre').removeClass('code-pop')
             pre.find('.mask,pre').css('display', 'none')
           }
-        });
-        //代码切换
-        $('.content-title p a').click(function() {
-          $(this).addClass('all').siblings().removeClass('all');
+        })
+      // 代码切换
+        $('.content-title p a').click(function () {
+          $(this).addClass('all').siblings().removeClass('all')
         })
 
-        $('.learing-box .item-list').mouseover(function(e) {
+        $('.learing-box .item-list').mouseover(function (e) {
           $(this).css({
             'height': '140px'
           }).addClass('hov').siblings().css({
@@ -726,7 +383,7 @@
           })
           $(this).siblings().removeClass('hov')
         })
-        $('.learing-box .item-box').mouseout(function() {
+        $('.learing-box .item-box').mouseout(function () {
           $(this).find('.item-list:first').css({
             'height': '140px'
           }).addClass('hov')
@@ -736,55 +393,50 @@
         })
       })
 
-
-      $(function() {
-        //评分
-        $('.star .score').map(function(n, i) {
-          var x = Number($(this).find('i').text());
-          var w = 109 * (1 - x / 5);
-          $(this).css('width', w + 'px');
+      $(function () {
+        // 评分
+        $('.star .score').map(function (n, i) {
+          var x = Number($(this).find('i').text())
+          var w = 109 * (1 - x / 5)
+          $(this).css('width', w + 'px')
         })
-        //评论打分
-        $('.evaluate .star').mousemove(function(e) {
-          var startX = $(this).offset().left;
-          var movX = e.clientX - startX + 0.5;
-          var w = 145 * (1 - movX / 145);
-          $(this).find('.score').css('width', w + 'px');
+        // 评论打分
+        $('.evaluate .star').mousemove(function (e) {
+          var startX = $(this).offset().left
+          var movX = e.clientX - startX + 0.5
+          var w = 145 * (1 - movX / 145)
+          $(this).find('.score').css('width', w + 'px')
           $('.star-score i').text((movX / 145 * 5).toFixed(1))
         })
-        //星级评分
-        $('.grade').map(function(n, i) {
-          var pret = $(this).find('.percent-num i').text();
-          var wt = $(this).find('.grade-percent').width();
-          $(this).find('.grade-percent span').css('width', wt * pret / 100);
+        // 星级评分
+        $('.grade').map(function (n, i) {
+          var pret = $(this).find('.percent-num i').text()
+          var wt = $(this).find('.grade-percent').width()
+          $(this).find('.grade-percent span').css('width', wt * pret / 100)
         })
-
-
-
       })
 
-      $(function() {
-        var vidHit = $('html').height() - 0;
-        var vidCenHit = (vidHit - $('.video-play').height()) / 2;
-        var vdwt = $('.video').width();
-        var wt = 300;
+      $(function () {
+        var vidHit = $('html').height() - 0
+        var vidCenHit = (vidHit - $('.video-play').height()) / 2
+        var vdwt = $('.video').width()
+        var wt = 300
 
-        $('.course-cont-top-video,.video').css('height', vidHit);
-        $('.video').css('height', vidHit - 50);
+        $('.course-cont-top-video,.video').css('height', vidHit)
+        $('.video').css('height', vidHit - 50)
 
+        $('.note-cont').css('height', vidHit - $('.note-box .note').height() - 65)
 
-        $('.note-cont').css('height', vidHit - $('.note-box .note').height() - 65);
-
-        $(window).resize(function() {
-          $('.course-cont-top-video,.video').css('height', vidHit);
-          $('.video').css('height', vidHit - 50);
+        $(window).resize(function () {
+          $('.course-cont-top-video,.video').css('height', vidHit)
+          $('.video').css('height', vidHit - 50)
 //      $('#video-player').height(vidHit - 70);
-          $('.nodte-cont').css('height', vidHit - $('.note-box .note').height() - 65);
-        });
-        $(window).resize();
-        //还原初始状态-控制器
-        function setStart(obj) {
-          if (obj === 'ck') { //左导航
+          $('.nodte-cont').css('height', vidHit - $('.note-box .note').height() - 65)
+        })
+        $(window).resize()
+      // 还原初始状态-控制器
+        function setStart (obj) {
+          if (obj === 'ck') { // 左导航
             setnt()
             setak()
             setcm()
@@ -812,14 +464,14 @@
           }
         }
 
-        function setck() {
+        function setck () {
           if ($('.video-box .glyphicon-align-justify').hasClass('ck')) {
-            $('.video-box .glyphicon-align-justify').removeClass('ck');
+            $('.video-box .glyphicon-align-justify').removeClass('ck')
             $('.video-box').animate({
               width: '100%'
             }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 0)
             $('.course-weeklist').animate({
               left: -wt
@@ -827,95 +479,95 @@
           }
         }
 
-        function setnt() {
+        function setnt () {
           if ($('.course-nav .lab-note').hasClass('nt')) {
-            $('.course-nav .lab-note').removeClass('nt');
+            $('.course-nav .lab-note').removeClass('nt')
             $('.note').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 0)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         }
         //
-        function setnav() {
+        function setnav () {
           if ($('.course-nav .nav').hasClass('nv')) {
-            $('.course-nav .nav').removeClass('nv');
+            $('.course-nav .nav').removeClass('nv')
             $('.navCont').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 0)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         }
         //
-        function setak() {
+        function setak () {
           if ($('.course-nav .lab-ask').hasClass('ak')) {
-            $('.course-nav .lab-ask').removeClass('ak');
+            $('.course-nav .lab-ask').removeClass('ak')
             $('.ask').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 0)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         }
         // 讲义
-        function setcm() {
+        function setcm () {
           if ($('.course-nav .lab-com').hasClass('cm')) {
-            $('.course-nav .lab-com').removeClass('cm');
+            $('.course-nav .lab-com').removeClass('cm')
             $('.com').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 0)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         }
         //
-        $('.note-box .problem').click(function() {
+        $('.note-box .problem').click(function () {
           alert('wenda')
           if (!$(this).hasClass('ck')) {
-            $(this).addClass('ck');
+            $(this).addClass('ck')
             $(this).find('p').css('display', 'block')
-            $('.note-cont').css('height', vidHit - $('.note-box .note').height() - 65);
+            $('.note-cont').css('height', vidHit - $('.note-box .note').height() - 65)
           } else {
-            $(this).removeClass('ck');
+            $(this).removeClass('ck')
             $(this).find('p').css('display', 'none')
-            $('.note-cont').css('height', vidHit - $('.note-box .note').height() - 65);
+            $('.note-cont').css('height', vidHit - $('.note-box .note').height() - 65)
           }
-        });
-        //
-        var reht = $(".video-box .resou-box").height();
-        $(".video-box .pull-right").click(function() {
+        })
+      //
+        var reht = $('.video-box .resou-box').height()
+        $('.video-box .pull-right').click(function () {
           if (!$(this).hasClass('ck')) {
-            $(this).addClass('ck');
-            $(".video-box .resources").animate({
+            $(this).addClass('ck')
+            $('.video-box .resources').animate({
               height: reht
             }, 500)
           } else {
-            $(this).removeClass('ck');
-            $(".video-box .resources").animate({
+            $(this).removeClass('ck')
+            $('.video-box .resources').animate({
               height: 0
             }, 500)
           }
         })
-        //笔记切换
-        $('.note-box .note-lab span, .ask-box .note-lab span').click(function() {
+        // 笔记切换
+        $('.note-box .note-lab span, .ask-box .note-lab span').click(function () {
           $(this).addClass('active').siblings().removeClass('active')
           if ($(this).index() == 1) {
             $('.note-item-cont').animate({
@@ -927,131 +579,128 @@
             }, 500)
           }
         })
-        //笔记部分处理
-        var myNtHt = $('.my-note .textarea-box').height();
-        $('.my-note .my-item-box').css('height', $('.note-box').height() - myNtHt - 160 + "px");
-        $('.sel-note .my-item-box').css('height', $('.note-box').height() - 160 + "px");
-        $('.course-nav .lab-note').click(function() {
+        // 笔记部分处理
+        var myNtHt = $('.my-note .textarea-box').height()
+        $('.my-note .my-item-box').css('height', $('.note-box').height() - myNtHt - 160 + 'px')
+        $('.sel-note .my-item-box').css('height', $('.note-box').height() - 160 + 'px')
+        $('.course-nav .lab-note').click(function () {
           window.location = '#'
-          setStart('nt');
+          setStart('nt')
           if (!$(this).hasClass('nt')) {
-            $(this).addClass('nt');
+            $(this).addClass('nt')
             $('.note').animate({
-              'width': "400px"
+              'width': '400px'
             }, 500)
             $('.course-nav').animate({
-              'right': "401px"
+              'right': '401px'
             }, 500)
             $('.video').animate({
               'width': vdwt - 380 + 'px'
-            }, 500);
+            }, 500)
           } else {
-            $(this).removeClass('nt');
+            $(this).removeClass('nt')
             $('.note').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 500)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         })
-        //目录
-        $('.course-nav .nav').click(function() {
+        // 目录
+        $('.course-nav .nav').click(function () {
           window.location = '#'
-          setStart('nv');
+          setStart('nv')
           if (!$(this).hasClass('nv')) {
-            $(this).addClass('nv');
+            $(this).addClass('nv')
             $('.navCont').animate({
-              'width': "300px"
+              'width': '300px'
             }, 500)
             $('.course-nav').animate({
-              'right': "301px"
+              'right': '301px'
             }, 500)
             $('.video').animate({
               'width': vdwt - 280 + 'px'
-            }, 500);
+            }, 500)
           } else {
-            $(this).removeClass('nv');
+            $(this).removeClass('nv')
             $('.navCont').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 500)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         })
         // 问答
-        $('.course-nav .lab-ask').click(function() {
+        $('.course-nav .lab-ask').click(function () {
           window.location = '#'
-          setStart('ak');
+          setStart('ak')
           if (!$(this).hasClass('ak')) {
-            $(this).addClass('ak');
+            $(this).addClass('ak')
             $('.ask').animate({
-              'width': "400px"
+              'width': '400px'
             }, 500)
             $('.course-nav').animate({
-              'right': "401px"
+              'right': '401px'
             }, 500)
             $('.video').animate({
               'width': vdwt - 380 + 'px'
-            }, 500);
+            }, 500)
           } else {
-            $(this).removeClass('ak');
+            $(this).removeClass('ak')
             $('.ask').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 500)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         })
         // 评论
-        $('.course-nav .lab-com').click(function() {
+        $('.course-nav .lab-com').click(function () {
           window.location = '#'
-          setStart('cm');
+          setStart('cm')
           if (!$(this).hasClass('cm')) {
-            $(this).addClass('cm');
+            $(this).addClass('cm')
             $('.com').animate({
-              'width': "400px"
+              'width': '400px'
             }, 500)
             $('.course-nav').animate({
-              'right': "401px"
+              'right': '401px'
             }, 500)
             $('.video').animate({
               'width': vdwt - 380 + 'px'
-            }, 500);
+            }, 500)
           } else {
-            $(this).removeClass('cm');
+            $(this).removeClass('cm')
             $('.com').animate({
-              'width': "0"
-            }, 500);
+              'width': '0'
+            }, 500)
             $('.course-nav').animate({
-              'right': "0px"
+              'right': '0px'
             }, 500)
             $('.video').animate({
               'width': '100%'
-            }, 500);
+            }, 500)
           }
         })
 //    //video播放器
 //    $('.video-mine .cls-text').click(function() {
 //
 //    })
-
       })
-
     }
   }
-
 </script>
 
 <style>

@@ -55,27 +55,28 @@
 
       </el-form>
     </el-dialog>
+
     <el-dialog title="选择媒资文件" :visible.sync="mediaFormVisible">
       <media-list v-bind:ischoose="true" @choosemedia="choosemedia"></media-list>
     </el-dialog>
   </div>
 </template>
 <script>
-  let id = 1000;
-  import * as courseApi from '../../api/course';
-  import utilApi from '../../../../common/utils';
-  import * as systemApi from '../../../../base/api/system';
-  import mediaList from '@/module/media/page/media_list.vue';
+  let id = 1000
+import * as courseApi from '../../api/course'
+import utilApi from '../../../../common/utils'
+import * as systemApi from '../../../../base/api/system'
+import mediaList from '@/module/media/page/media_list.vue'
 
-  export default {
-    components:{
+export default {
+    components: {
       mediaList
     },
-    data() {
+    data () {
       return {
-        mediaFormVisible:false,
-        teachplayFormVisible:false,//控制添加窗口是否显示
-        teachplanList : [{
+        mediaFormVisible: false,
+        teachplayFormVisible: false, // 控制添加窗口是否显示
+        teachplanList: [{
           id: 1,
           pname: '一级 1',
           children: [{
@@ -90,7 +91,7 @@
             }]
           }]
         }],
-        defaultProps:{
+        defaultProps: {
           children: 'children',
           label: 'pname'
         },
@@ -102,85 +103,93 @@
             {required: true, message: '请选择状态', trigger: 'blur'}
           ]
         },
-        teachplanActive:{},
-        teachplanId:''
+        teachplanActive: {},
+        teachplanId: ''
       }
     },
     methods: {
-        //选择视频，打开窗口
-      choosevideo(data){
-          //得到当前的课程计划
-          this.teachplanId = data.id
+        // 选择视频，打开窗口
+      choosevideo (data) {
+          // 得到当前的课程计划
+        this.teachplanId = data.id
 //        alert(this.teachplanId)
-          this.mediaFormVisible = true;//打开窗口
+        this.mediaFormVisible = true// 打开窗口
       },
-      //保存选择的视频
-      choosemedia(mediaId,fileOriginalName,mediaUrl){
-        //保存视频到课程计划表中
-        let teachplanMedia ={}
-        teachplanMedia.mediaId =mediaId;
-        teachplanMedia.mediaFileOriginalName =fileOriginalName;
-        teachplanMedia.mediaUrl =mediaUrl;
-        teachplanMedia.courseId =this.courseid;
+      // 保存选择的视频
+      choosemedia (mediaId, fileOriginalName, mediaUrl) {
+        // 保存视频到课程计划表中
+        let teachplanMedia = {}
+        teachplanMedia.mediaId = mediaId
+        teachplanMedia.mediaFileOriginalName = fileOriginalName
+        teachplanMedia.mediaUrl = mediaUrl
+        teachplanMedia.courseId = this.courseid
 
-        //课程计划
-        teachplanMedia.teachplanId=this.teachplanId
+      // 课程计划
+        teachplanMedia.teachplanId = this.teachplanId
 
-        courseApi.savemedia(teachplanMedia).then(res=>{
-            if(res.success){
-                this.$message.success("选择视频成功")
-              //查询课程计划
-              this.findTeachplan()
-            }else{
-              this.$message.error(res.message)
-            }
+        courseApi.savemedia(teachplanMedia).then(res => {
+          if (res.success) {
+            this.$message.success('选择视频成功')
+              // 查询课程计划
+            this.findTeachplan()
+          } else {
+            this.$message.error(res.message)
+          }
         })
       },
-      //提交课程计划
-      addTeachplan(){
-        //校验表单
+      // 提交课程计划
+      addTeachplan () {
+        // 校验表单
         this.$refs.teachplanForm.validate((valid) => {
-            if (valid) {
-                //调用api方法
-              //将课程id设置到teachplanActive
-              this.teachplanActive.courseid = this.courseid
-              courseApi.addTeachplan(this.teachplanActive).then(res=>{
-                if(res.success){
-                    this.$message.success("添加成功")
-                    //刷新树
-                    this.findTeachplan()
-                }else{
-                  this.$message.error(res.message)
-                }
-
-              })
-            }
+          if (valid) {
+                // 调用api方法
+              // 将课程id设置到teachplanActive
+            this.teachplanActive.courseid = this.courseid
+            courseApi.addTeachplan(this.teachplanActive).then(res => {
+              if (res.success) {
+                this.$message.success('添加成功')
+                    // 刷新树
+                this.findTeachplan()
+              } else {
+                this.$message.error(res.message)
+              }
+            })
+          }
         })
       },
-  //重置表单
-      resetForm(){
+  // 重置表单
+      resetForm () {
         this.teachplanActive = {}
       },
 
-      append(data) {
-        const newChild = { id: id++, label: 'testtest', children: [] };
+      append (data) {
+        const newChild = { id: id++, label: 'testtest', children: [] }
         if (!data.children) {
-          this.$set(data, 'children', []);
+          this.$set(data, 'children', [])
         }
-        data.children.push(newChild);
+        data.children.push(newChild)
+      },
+      edit (data) {
+        this.teachplayFormVisible = true
+        courseApi.findTeachplan(data.id).then(response => {
+          this.teachplanActive.parentid = response.parentid
+          this.teachplanActive.pname = response.pname
+          this.teachplanActive.ptype = response.ptype
+          this.teachplanActive.timelength = response.timelength
+          this.teachplanActive.orderby = response.orderby
+          this.teachplanActive.description = response.description
+          this.teachplanActive.status = response.status
+        })
+      },
+      remove (node, data) {
+        const parent = node.parent
+        const children = parent.data.children || parent.data
+        const index = children.findIndex(d => d.id === data.id)
+        children.splice(index, 1)
+        courseApi.deleteTeachplan(data.id)
+      },
 
-      },
-      edit(data){
-        //alert(data.id);
-      },
-      remove(node, data) {
-        const parent = node.parent;
-        const children = parent.data.children || parent.data;
-        const index = children.findIndex(d => d.id === data.id);
-        children.splice(index, 1);
-
-      },
-      renderContent(h, { node, data, store }) {
+      renderContent (h, { node, data, store }) {
         return (
           <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
             <span>
@@ -191,25 +200,25 @@
               <el-button style="font-size: 12px;" type="text" on-click={ () => this.edit(data) }>修改</el-button>
               <el-button style="font-size: 12px;" type="text" on-click={ () => this.remove(node, data) }>删除</el-button>
             </span>
-          </span>);
+          </span>)
       },
-      findTeachplan(){
+      findTeachplan () {
         this.teachplanList = []
-        //查询课程计划
-        courseApi.findTeachplanList(this.courseid).then(res=>{
-            if(res && res.children){
-              this.teachplanList = res.children;
-            }else {
-              this.$message.error("课程计划查询失败")
-              console.log(res)
-            }
+        // 查询课程计划
+        courseApi.findTeachplanList(this.courseid).then(res => {
+          if (res && res.children) {
+            this.teachplanList = res.children
+          } else {
+            this.$message.error('课程计划查询失败')
+            console.log(res)
+          }
         })
       }
     },
-    mounted(){
-      //课程id
-      this.courseid = this.$route.params.courseid;
-      //查询课程计划
+    mounted () {
+      // 课程id
+      this.courseid = this.$route.params.courseid
+    // 查询课程计划
       this.findTeachplan()
     }
   }
