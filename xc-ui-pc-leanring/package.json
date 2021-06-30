@@ -70,6 +70,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^21.2.0",
     "jest-serializer-vue": "^0.3.0",
+    "jquery": "^3.6.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "mockjs": "^1.0.1-beta3",

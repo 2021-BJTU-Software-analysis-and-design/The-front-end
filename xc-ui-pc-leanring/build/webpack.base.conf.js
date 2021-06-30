@@ -27,7 +27,14 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'scss_vars': '@/statics/css/vars.scss'
+      'scss_vars': '@/statics/css/vars.scss',
+      'jquery':'static/js/jquery.js',
+      // 'popper':'static/js/popper.min.js',
+      // 'bootstrap':'static/js/bootstrap.min.js',
+      // 'owl':'static/js/owl.js',
+      // 'wow':'static/js/wow.js',
+      // 'parallax':'static/js/parallax.min.js',
+      'script':resolve('static/js/script.js')
     }
   },
   module: {
@@ -77,5 +84,11 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins:[
+    new webpack.ProgressPlugin({
+      $:'jquery',
+      jQuery:'jquery'
+    })
+  ]
 }

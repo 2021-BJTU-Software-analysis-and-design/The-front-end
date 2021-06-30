@@ -9,6 +9,26 @@
   import jwtDecode from 'jwt-decode'
   import base64 from 'js-base64'
   import utilApi from './common/utils'
+  import '../static/css/style.css'
+  // import '../static/css/font-awesome-all.css'
+  // import '../static/css/animate.css'
+  import '../static/css/responsive.css'
+  import '../static/css/jquery.growl.css'
+  import '../static/js/jquery.js'
+  import '../static/js/jquery-ui'
+  import '../static/js/popper.min.js'
+  import '../static/js/bootstrap.min.js'
+  import '../static/js/owl.js'
+  import '../static/js/wow.js'
+  import '../static/js/validation.js'
+  import '../static/js/jquery.fancybox.js'
+  import '../static/js/appear.js'
+  import '../static/js/parallax.min.js'
+  import '../static/js/jquery.growl.js'
+  import '../static/js/script.js'
+  import myScript from "../static/js/myScript"
+
+
 export default {
 
   data () {
@@ -47,6 +67,9 @@ export default {
       }
 
     } */
+  },
+  mounted() {
+    myScript();
   }
 }
 </script>

@@ -19,8 +19,6 @@ import './statics/mui/css/mui.css'
 import VueQriously from 'vue-qriously'
 
 // 导入当前系统的全局基本样式
-import './statics/css/site.css'
-import './statics/css/responsive.css'
 // import './statics/css/style.css'
 import bus from './common/bus.js'
 // 导入轮播图
