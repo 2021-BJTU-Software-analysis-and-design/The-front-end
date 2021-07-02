@@ -85,14 +85,14 @@ router.beforeEach((to, from, next) => {
           //跳转到统一登陆
           console.log("未登录")
           Message.warning("请先登陆")
-          window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
+          window.location = "http://ucenter.ruitong.com/#/login?returnUrl="+ Base64.encode(window.location)
         }
       })
     }else{
       //跳转到统一登陆
       console.log("未登录")
       Message.warning("请先登陆")
-      window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
+      window.location = "http://ucenter.ruitong.com/#/login?returnUrl="+ Base64.encode(window.location)
     }
   }else{
     next();
@@ -148,7 +148,7 @@ axios.interceptors.response.use(data => {
       //   path: '/login',
       //   query: {returnUrl: Base64.encode(window.location)}
       // })
-      window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
+      window.location = "http://ucenter.ruitong.com/#/login?returnUrl="+ Base64.encode(window.location)
     }else if(data.data.code && data.data.code =='10002'){
       Message.error('您没有权限操作该选项');
       return

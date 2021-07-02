@@ -1,15 +1,17 @@
 <template>
 <div>
-  <p-head></p-head>
-  <div class="personal-header" style="background-image: url(static/images/asset-banner.png);"></div>
+<!--  <myHeader></myHeader>-->
+  <div class="personal-header" style="background-image: url(./static/images/asset-banner.png);">
+<!--    <img src="static/images/asset-banner.png">-->
+  </div>
   <!-- 页面 -->
   <div class="container">
     <div class="personal-nav pull-left">
       <div class="nav nav-stacked text-left">
         <div class="title">个人中心</div>
         <div class="my-ico">
-          <img src="/static/images/asset-myimg.jpg" alt="">
-          <p>梦醒时分</p>
+          <img src="/static/images/nonepic.jpg" alt="">
+          <p>{{user}}</p>
         </div>
         <div class="item">
 
@@ -28,34 +30,43 @@
     </div>
   </div>
 
-  <p-foot></p-foot>
+<!--  <myFooter></myFooter>-->
+
 </div>
 </template>
 
 <script>
-  import PHead from '@/base/components/head.vue';
-  import PFoot from '@/base/components/foot.vue';
-//  import courseList from '@/module/course/page/course_list.vue';
-
-//  import $ from  './../../../../static/plugins/jquery/dist/jquery.js'
-//  import './../../../../static/plugins/bootstrap/dist/js/bootstrap.js'
+  import myHeader from '../../../base/components/head.vue';
+  import myFooter from '../../../base/components/foot.vue';
+  import utilApi from '../../../common/utils'
   export default {
     components:{
-      PHead,
-      PFoot
+      myHeader,
+      myFooter
     },
     data() {
       return {
-
+        user,
       }
     },
     methods: {
+      refresh_user: function () {
+        let activeUser = utilApi.getActiveUser()
 
+        if (activeUser) {
+          this.user = activeUser.username;
+          // console.log(this.user.username)
+        } else {
+          // this.showlogin()
+        }
+      }
+    },
+    created() {
+      this.refresh_user();
     },
     mounted() {
       //跳转到我的课程
       //this.$router.push({ path: '/course'})
-
       $(function() {
         $('.aft').hover(function() {
           if (!$(this).hasClass('ac')) {

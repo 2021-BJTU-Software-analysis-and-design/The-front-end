@@ -681,7 +681,7 @@ transition: all 0.3s ease-in-out 0.3s;
 
 .wraper_flyout_search > .table > .table-cell > .flyout-search-layer:nth-child(3) {
 left: 0px;
-background-color: rgba(0, 0, 0, 0.8);
+background-color: rgba(0, 0, 0, 0.9);
 transition: all 0.9s ease-in-out 0.6s;
 -webkit-transition: all 0.9s ease-in-out 0.6s;
 }

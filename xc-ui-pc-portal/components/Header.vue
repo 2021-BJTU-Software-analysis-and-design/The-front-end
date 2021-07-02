@@ -50,22 +50,22 @@
                   <li>
                     <i class="fas fa-user"></i>
                     <span v-if="logined" >
-                  <a href="http://ucenter.xuecheng.com/#/">亲爱的 {{user}} 您好</a>
+                  <a href="http://ucenter.ruitong.com/#/">亲爱的 {{user}} 您好</a>
                   <a v-on:click="logout"> 退出登录</a>
                   </span>
-                    <a href="http://ucenter.xuecheng.com/#/login" v-else>登录/注册</a>
+                    <a href="http://ucenter.ruitong.com/#/login" v-else>登录/注册</a>
                   </li>
                   <li v-if="logined">
                     <i class="fas fa-user"></i>
-                    <a href="http://ucenter.xuecheng.com/#/">个人中心</a>
+                    <a href="http://ucenter.ruitong.com/#/">个人中心</a>
                   </li>
                   <li>
                     <i class="fas fa-user-circle"></i>
-                    <a href="http://teacher.xuecheng.com/">课程管理</a>
+                    <a href="http://teacher.ruitong.com/">课程管理</a>
                   </li>
                   <li>
                     <i class="fas fa-user-clock"></i>
-                    <a href="http://cms.xuecheng.com/">系统管理</a>
+                    <a href="http://cms.ruitong.com/">系统管理</a>
                   </li>
                 </ul>
               </div>
@@ -77,7 +77,7 @@
           <div class="container">
             <div class="clearfix">
               <div class="logo-box pull-left">
-                <figure class="logo"><a href="http://www.xuecheng.com/index.html"><img src="static/images/logo.png" alt=""></a></figure>
+                <figure class="logo"><a href="http://www.ruitong.com/index.html"><img src="static/images/logo.png" alt=""></a></figure>
               </div>
               <div class="nav-outer pull-right clearfix">
                 <div class="menu-area">
@@ -92,7 +92,7 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                       <ul class="navigation clearfix">
-                        <li class="current"><a href="http://www.xuecheng.com/index.html">首页</a></li>
+                        <li class="current"><a href="http://www.ruitong.com/index.html">首页</a></li>
                         <li class="dropdown"><a href="#">解决方案</a>
                           <ul>
                             <li><a class="warning" href="#">产品介绍</a></li>
@@ -101,10 +101,10 @@
                         </li>
                         <li class="dropdown"><a href="#">课程中心</a>
                           <ul>
-                            <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
+                            <li><a href="http://www.ruitong.com/course/search">课程内容</a></li>
                           </ul>
                         </li>
-                        <li><a href="http://www.xuecheng.com/gallery.html">作品案例</a></li>
+                        <li><a href="http://www.ruitong.com/gallery.html">作品案例</a></li>
                         <li class="dropdown"><a href="#">赛事平台</a>
                           <ul>
                             <li><a class="warning" href="#">少年硅谷</a></li>
@@ -119,7 +119,7 @@
                           </ul>
                         </li>
                         <li>
-                          <a href="http://www.xuecheng.com/contact.html">联系我们</a>
+                          <a href="http://www.ruitong.com/contact.html">联系我们</a>
                           <!--                                            <ul>-->
                           <!--                                                <li><a class="warning" href="#">合作咨询</a></li>-->
                           <!--                                            </ul>-->
@@ -145,7 +145,7 @@
 <!--        &lt;!&ndash;Sticky Header 粘附式头部&ndash;&gt;-->
 <!--        <div class="sticky-header">-->
 <!--          <div class="container clearfix">-->
-<!--            <figure class="logo-box"><a href="http://www.xuecheng.com/index.html"><img src="static/images/small-logo.png" alt="睿瞳科技"></a></figure>-->
+<!--            <figure class="logo-box"><a href="http://www.ruitong.com/index.html"><img src="static/images/small-logo.png" alt="睿瞳科技"></a></figure>-->
 <!--            <div class="menu-area">-->
 <!--              <nav class="main-menu navbar-expand-lg">-->
 <!--                <div class="navbar-header">-->
@@ -158,7 +158,7 @@
 <!--                </div>-->
 <!--                <div class="navbar-collapse collapse clearfix">-->
 <!--                  <ul class="navigation clearfix">-->
-<!--                    <li class="current"><a href="http://www.xuecheng.com/index.html">首页</a></li>-->
+<!--                    <li class="current"><a href="http://www.ruitong.com/index.html">首页</a></li>-->
 <!--                    <li class="dropdown"><a href="#">解决方案</a>-->
 <!--                      <ul>-->
 <!--                        <li><a class="warning" href="#">产品介绍</a></li>-->
@@ -170,7 +170,7 @@
 <!--                        <li><a class="warning" href="#">课程内容</a></li>-->
 <!--                      </ul>-->
 <!--                    </li>-->
-<!--                    <li><a href="http://www.xuecheng.com/gallery.html">作品案例</a></li>-->
+<!--                    <li><a href="http://www.ruitong.com/gallery.html">作品案例</a></li>-->
 <!--                    <li class="dropdown"><a href="#">赛事平台</a>-->
 <!--                      <ul>-->
 <!--                        <li><a class="warning" href="#">少年硅谷</a></li>-->
@@ -185,7 +185,7 @@
 <!--                      </ul>-->
 <!--                    </li>-->
 <!--                    <li>-->
-<!--                      <a href="http://www.xuecheng.com/contact.html">联系我们</a>-->
+<!--                      <a href="http://www.ruitong.com/contact.html">联系我们</a>-->
 <!--                      &lt;!&ndash;                                            <ul>&ndash;&gt;-->
 <!--                      &lt;!&ndash;                                                <li><a class="warning" href="#">合作咨询</a></li>&ndash;&gt;-->
 <!--                      &lt;!&ndash;                                            </ul>&ndash;&gt;-->
@@ -236,7 +236,7 @@ export default {
     return {
       keyword: '',
       LoginFormVisible: false,
-      logined: true,
+      logined: false,
       user:'xx',
       isShowSearch:false
     }
@@ -255,7 +255,7 @@ export default {
       this.$confirm('确认退出吗?', '提示', {
       }).then(() => {
         //跳转到统一登陆
-        window.location = "http://ucenter.xuecheng.com/#/logout"
+        window.location = "http://ucenter.ruitong.com/#/logout"
       }).catch(() => {
 
       });
@@ -265,7 +265,7 @@ export default {
 
       if(activeUser){
         this.logined = true
-        this.user = activeUser;
+        this.user = activeUser.username;
         //console.log(this.user.username)
       }else{
         //this.showlogin()

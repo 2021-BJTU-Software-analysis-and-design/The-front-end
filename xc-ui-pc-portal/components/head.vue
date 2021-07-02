@@ -155,8 +155,8 @@
 <!--          <div class="logo"><img src="/static/img/asset-logoIco.png" width="100%" alt=""></div>-->
 <!--          <div class="nav-list">-->
 <!--            <ul class="nav navbar-nav">-->
-<!--              <li ><a href="http://www.xuecheng.com/">首页</a></li>-->
-<!--              <li><a href="http://www.xuecheng.com/course/search">课程</a></li>-->
+<!--              <li ><a href="http://www.ruitong.com/">首页</a></li>-->
+<!--              <li><a href="http://www.ruitong.com/course/search">课程</a></li>-->
 <!--              <li><a href="#">职业规划</a></li>-->
 <!--              <li></li>-->
 <!--            </ul>-->
@@ -215,10 +215,10 @@ export default {
     methods: {
       search () {
         if (this.keyword === '') {
-          window.location = 'http://www.xuecheng.com/course/search'
+          window.location = 'http://www.ruitong.com/course/search'
         } else {
           let keyword = encodeURIComponent(this.keyword)
-          window.location = 'http://www.xuecheng.com/course/search?keyword=' + keyword
+          window.location = 'http://www.ruitong.com/course/search?keyword=' + keyword
         }
       },
       // 退出登录
@@ -244,8 +244,8 @@ export default {
       },
       showlogin: function () {
         // this.loginFormVisible = true;
-        window.location = 'http://ucenter.xuecheng.com/#/login?returnUrl=' +
-          Base64.encode(window.location)
+        // window.location = 'http://ucenter.ruitong.com/#/login?returnUrl=' +
+        //   Base64.encode(window.location)
       }
     },
     mounted () {

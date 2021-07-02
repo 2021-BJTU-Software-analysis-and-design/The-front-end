@@ -92,7 +92,7 @@ export default {
 //                    //跳转到首页
 //                    window.location.href = returnUrl;
 //                  }else{
-//                    window.location.href = 'http://www.xuecheng.com/'
+//                    window.location.href = 'http://www.ruitong.com/'
 //                  }
 
                 }else{

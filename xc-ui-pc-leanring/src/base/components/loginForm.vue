@@ -39,6 +39,7 @@ import utilApi from '../../common/utils';
 import * as loginApi from '../api/login';
 import register from "../../module/home/page/register";
 import Vue from 'vue'
+import * as systemApi from "../api/system";
 export default {
 	components:{
 	  register
@@ -82,7 +83,22 @@ export default {
               loginApi.login(para).then((res) => {
                 this.editLoading = false;
                 if(res.success){
-                  this.$message('登陆成功');
+                  systemApi.getjwt().then((res) => {
+                    if (res.success) {
+                      let jwt = res.jwt
+                      let activeUser = utilApi.getUserInfoFromJwt(jwt)
+                      if (activeUser) {
+                        utilApi.setUserSession('activeUser', JSON.stringify(activeUser))
+                      }
+                      this.$message.success('保存成功');
+                    } else {
+                      // 跳转到统一登陆
+                      // window.location = 'http://ucenter.ruitong.com/#/login?returnUrl=' + Base64.encode(window.location)
+                      this.$message.success('保存失败');
+                    }
+                  });
+                  this.refresh_user();
+                  this.$message.success('登陆成功');
                   //刷新 当前页面
                  // alert(this.returnUrl)
                   console.log(this.returnUrl)
@@ -93,7 +109,7 @@ export default {
                     window.location.href = this.returnUrl;
                   }else{
                     //跳转到首页
-                    window.location.href = 'http://www.xuecheng.com/'
+                    // window.location.href = 'http://www.ruitong.com/'
                   }
 
                 }else{

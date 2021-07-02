@@ -37,7 +37,7 @@
     <div slot="footer" class="dialog-footer">
       <el-button type="primary"  @click.native="save" >提交</el-button>
     </div>
-    <p v-text="debug"></p>
+<!--    <p v-text="debug"></p>-->
   </div>
 </template>
 <script>

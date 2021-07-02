@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="myCourseList">
     <div class="learing-list">
       <div class="myInput">
       <div class="input-search"><el-input v-model="searchKeyword" ></el-input></div>
-      <div class="searchword"><el-button >搜索</el-button></div>
+      <div class="searchword" v-on:click="searchCourse"><el-button >搜索</el-button></div>
       </div>
       <div class="list-box">
         <ul>
@@ -130,14 +130,14 @@
                 <!-- 渲染课程信息 -->
                 <div class="recom-item" v-for="(course, index) in courselist">
                   <nuxt-link :to="'/course/detail/'+course.id+'.html'" target="_blank">
-                    <div v-if="!course.pic">
+<!--                    <div v-if="course.pic">-->
+<!--                      <p>-->
+<!--                        <img :src="imgUrl+'/'+course.pic" width="100%" alt />-->
+<!--                      </p>-->
+<!--                    </div>-->
+                    <div >
                       <p>
-                        <img :src="imgUrl+'/'+course.pic" width="100%" alt />
-                      </p>
-                    </div>
-                    <div v-else>
-                      <p>
-                        <img src="/static/img/nonepic.png" width="100%" alt />
+                        <img src="/static/img/nonepic.jpg"  alt />
                       </p>
                     </div>
                     <ul>
@@ -155,7 +155,7 @@
                   </nuxt-link>
                 </div>
 
-                <li class="clearfix"></li>
+<!--                <li class="clearfix"></li>-->
               </div>
               <div class="clearfix"></div>
             </div>
@@ -303,7 +303,8 @@ export default {
       total: 0, //总记录数
       page: 1, //页码
       page_size: 10, //每页显示个数
-      searchKeyword:''
+      searchKeyword:'',
+      courseImages:"/images/nonepic.jpg",
     };
   },
   watch: {
@@ -321,6 +322,14 @@ export default {
     search() {
       //刷新当前页面
       window.location.reload();
+    },
+    searchCourse () {
+      if (this.searchKeyword === '') {
+        window.location = 'http://www.ruitong.com/course/search'
+      } else {
+        let searchKeyword = encodeURIComponent(this.searchKeyword)
+        window.location = 'http://www.ruitong.com/course/search?keyword=' + searchKeyword;
+      }
     }
   },
   mounted() {}
@@ -359,14 +368,25 @@ a {
   color: #990000;
 }
 
+.recom-item {
+  padding-bottom: 20px;
+  background: #ffffff;
+  margin-bottom: 15px;
+  width: 23.5%;
+  margin-left: 1.9%;
+  float: left;
+  border: #929292;
+  border: 10px;
+}
+
 .myInput{
   position: relative;
   bottom: 0;
-  margin-top: 20px;
   padding: 0;
 }
 
 .myInput .input-search{
+  margin-top: 20px;
   position: relative;
   width: 546px;
   display: inline-block;
@@ -380,5 +400,9 @@ a {
   position: relative;
   z-index: 2;
   display: inline-block;
+}
+
+.myCourseList{
+  background-color: #f0f2f5;
 }
 </style>

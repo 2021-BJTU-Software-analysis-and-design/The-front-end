@@ -112,7 +112,7 @@
     methods: {
       //页面预览
       preview(pageId){
-        window.open("http://xuecheng.com/cms/preview/"+pageId)
+        window.open("http://cms.ruitong.com/cms/preview/"+pageId)
       },
 
       //触发分页参数变动

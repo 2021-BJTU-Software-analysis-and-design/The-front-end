@@ -2,7 +2,7 @@
   <div>
     <el-row class="container" style="width: 470px">
         <el-form :model="registerForm" label-width="80px" :rules="registerRules" ref="loginForm" class="register-form">
-          <el-form-item label="账号" prop="username">
+          <el-form-item label="账号/用户名" prop="username">
             <el-input v-model="registerForm.username" auto-complete="off" ></el-input>
           </el-form-item>
           <el-form-item label="邮箱" prop="email">
@@ -13,6 +13,13 @@
           </el-form-item>
           <el-form-item label="确认密码" prop="confirmPassword">
             <el-input v-model="registerForm.confirmPassword" auto-complete="off" ></el-input>
+          </el-form-item>
+          <el-form-item label="手机号码" prop="phone">
+            <el-input v-model="registerForm.phone" auto-complete="off" ></el-input>
+          </el-form-item>
+          <el-form-item label="性别" prop="sex">
+            <el-radio v-model="registerForm.sex" label="1" >男</el-radio>
+            <el-radio v-model="registerForm.sex" label="0" >女</el-radio>
           </el-form-item>
           <el-form-item >
             <el-button type="primary"  @click.native="register" :loading="editLoading">注册</el-button>
@@ -36,7 +43,9 @@
           username:'',
           password: '',
           email:'',
-          confirmPassword:''
+          confirmPassword:'',
+          phone:'',
+          sex:'',
         },
         registerRules: {
           username: [
@@ -75,7 +84,9 @@
 
             loginApi.register(para).then((res) => {
                 this.editLoading = false;
-                if(res.success){
+                if(res==='UCENTER_SUCCESS'){
+                  this.$message.success('注册成功');
+                }else if(res.success){
                   this.$message('注册成功');
                 }else{
                   if(res.message){
@@ -122,15 +133,6 @@
     mounted() {
 
       this.refresh_user()
-//    Vue.prototype.loginwin = this;
-      if( this.$route.query &&  this.$route.query.returnUrl){
-
-        let returnUrl =  Base64.decode(this.$route.query.returnUrl)
-        //alert(returnUrl)
-        this.returnUrl = returnUrl;
-        //alert(this.returnUrl)
-      }
-
     }
 	}
 </script>

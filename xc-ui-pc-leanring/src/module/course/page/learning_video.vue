@@ -27,143 +27,143 @@
             <div class="course-nav">
               <div class="nav-stacked text-center">
                 <li class="nav"><a :href="url" class="glyphicon glyphicon-list-alt"><span>目录</span></a></li>
-                <li class="lab-note"><a :href="url" class="glyphicon glyphicon-user"><span>笔记</span></a></li>
-                <li class="lab-ask"><a :href="url" class="glyphicon glyphicon-cog"><span>问答</span></a></li>
-                <li class="lab-com"><a :href="url" class="glyphicon glyphicon-duplicate"><span>评论</span></a></li>
+<!--                <li class="lab-note"><a :href="url" class="glyphicon glyphicon-user"><span>笔记</span></a></li>-->
+<!--                <li class="lab-ask"><a :href="url" class="glyphicon glyphicon-cog"><span>问答</span></a></li>-->
+<!--                <li class="lab-com"><a :href="url" class="glyphicon glyphicon-duplicate"><span>评论</span></a></li>-->
               </div>
             </div>
 
-            <div class="note">
-              <div class="note-box">
-                <div class="note-lab"><span class="active">我的笔记</span><span>精选笔记</span></div>
-                <div class="note-item-cont">
-                  <div class="my-note">
-                    <div class="textarea-box">
-                      <textarea name="my-note" id=""></textarea>
-                      <div class="info"><span class="time"><i class="i-play"></i>23`22` </span><span class="not-but">提交</span></div>
-                    </div>
-                    <ul class="my-item-box">
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                    <a :href="url" class="more">查看更多</a>
-                  </div>
-                  <div class="sel-note">
-                    <ul class="my-item-box">
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-29</span>
-                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                    <a :href="url" class="more">查看更多</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ask">
-              <div class="ask-box">
-                <div class="note-lab"><span class="active">我的问答</span><span>精选问答</span></div>
-                <div class="note-item-cont">
-                  <div class="my-note">
-                    <div class="textarea-box">
-                      <input type="text" class="ask-title" value="" placeholder="请输入问题标题">
-                      <textarea name="my-note" id="" placeholder="请输入问题描述"></textarea>
-                      <div class="info"><span class="pic" onclick="screenshot()">截图 </span><span class="not-but">保存</span></div>
-                    </div>
-                    <ul class="my-item-box">
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
+<!--            <div class="note">-->
+<!--              <div class="note-box">-->
+<!--                <div class="note-lab"><span class="active">我的笔记</span><span>精选笔记</span></div>-->
+<!--                <div class="note-item-cont">-->
+<!--                  <div class="my-note">-->
+<!--                    <div class="textarea-box">-->
+<!--                      <textarea name="my-note" id=""></textarea>-->
+<!--                      <div class="info"><span class="time"><i class="i-play"></i>23`22` </span><span class="not-but">提交</span></div>-->
+<!--                    </div>-->
+<!--                    <ul class="my-item-box">-->
+<!--                      <li>-->
+<!--                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>-->
+<!--                        <div class="cont">-->
+<!--                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）-->
+<!--                        </div>-->
+<!--                        <div class="operation"><span>2017-2-29</span>-->
+<!--                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>-->
+<!--                        </div>-->
+<!--                      </li>-->
+<!--                    </ul>-->
+<!--                    <a :href="url" class="more">查看更多</a>-->
+<!--                  </div>-->
+<!--                  <div class="sel-note">-->
+<!--                    <ul class="my-item-box">-->
+<!--                      <li>-->
+<!--                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="time"><i class="i-play"></i>23`22` </span></div>-->
+<!--                        <div class="cont">-->
+<!--                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）-->
+<!--                        </div>-->
+<!--                        <div class="operation"><span>2017-2-29</span>-->
+<!--                          <div class="oper-box"><span><i class="i-edt"></i>编辑</span><span><i class="i-del"></i>删除</span><span><i class="i-laud"></i>赞</span></div>-->
+<!--                        </div>-->
+<!--                      </li>-->
+<!--                    </ul>-->
+<!--                    <a :href="url" class="more">查看更多</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="ask">-->
+<!--              <div class="ask-box">-->
+<!--                <div class="note-lab"><span class="active">我的问答</span><span>精选问答</span></div>-->
+<!--                <div class="note-item-cont">-->
+<!--                  <div class="my-note">-->
+<!--                    <div class="textarea-box">-->
+<!--                      <input type="text" class="ask-title" value="" placeholder="请输入问题标题">-->
+<!--                      <textarea name="my-note" id="" placeholder="请输入问题描述"></textarea>-->
+<!--                      <div class="info"><span class="pic" onclick="screenshot()">截图 </span><span class="not-but">保存</span></div>-->
+<!--                    </div>-->
+<!--                    <ul class="my-item-box">-->
+<!--                      <li>-->
+<!--                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>-->
+<!--                        <div class="tit">这个是我想问的问题</div>-->
+<!--                        <div class="cont">-->
+<!--                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）-->
+<!--                        </div>-->
+<!--                        <div class="operation"><span>4 小时前</span>-->
+<!--                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>-->
+<!--                        </div>-->
+<!--                      </li>-->
 
-                    </ul>
-                    <a :href="url" class="more">查看更多</a>
-                  </div>
-                  <div class="sel-note">
-                    <ul class="my-item-box">
-                      <li>
-                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>
-                        <div class="tit">这个是我想问的问题</div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>4 小时前</span>
-                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                    <a :href="url" class="more">查看更多</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="com">
-              <div class="com-box">
-                <!--<div class="note-lab"><span class="active">我的问答</span><span>精选问答</span></div>-->
-                <div class="note-item-cont">
-                  <div class="my-note">
-                    <div class="evaluate">
-                      <div class="eva-top">
-                        <div class="tit">课程评分 </div>
-                        <div class="star">
-                          <div class="score"><i>5</i></div>
-                        </div><span class="star-score"> <i>5</i> 分</span></div>
-                      <div class="eva-cont">
-                        <div class="tit">学员评语 </div>
-                        <div class="text-box">
-                          <textarea class="form-control" rows="5" placeholder="扯淡、吐槽、表扬、鼓励......想说啥说啥！"></textarea>
-                          <div class="text-right"><span>发表评论</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--<div class="textarea-box">-->
-                    <!--<input type="text" class="ask-title" value="" placeholder="请输入问题标题">-->
-                    <!--<textarea name="my-note" id=""  placeholder="请输入问题描述"></textarea>-->
-                    <!--<div class="info"><span class="pic" onclick="screenshot()">截图 </span><span class="not-but">保存</span></div>-->
-                    <!--</div>-->
-                    <ul class="my-item-box">
-                      <li>
-                        <div>
-                          <span><img src="/static/images/asset-vid.png" alt=""></span>
-                          <span class="name">王老师</span>
-                          <div class="item-rit">
-                            <div class="star-show">
-                              <div class="score"><i>4</i></div>
-                            </div>
-                            <div class="showSt">评分 <span>5星</span></div>
-                          </div>
-                        </div>
-                        <div class="cont">
-                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）
-                        </div>
-                        <div class="operation"><span>2017-2-23</span>
-                          <div class="oper-box"></div>
-                        </div>
-                      </li>
-                    </ul>
-                    <a :href="url" class="more">查看更多</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!--                    </ul>-->
+<!--                    <a :href="url" class="more">查看更多</a>-->
+<!--                  </div>-->
+<!--                  <div class="sel-note">-->
+<!--                    <ul class="my-item-box">-->
+<!--                      <li>-->
+<!--                        <div><span><img src="/static/images/asset-vid.png" alt=""></span><span class="name">王老师</span><span class="our-answer">我来回答</span></div>-->
+<!--                        <div class="tit">这个是我想问的问题</div>-->
+<!--                        <div class="cont">-->
+<!--                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）-->
+<!--                        </div>-->
+<!--                        <div class="operation"><span>4 小时前</span>-->
+<!--                          <div class="oper-box"><span>回答 2</span><span>浏览 4</span></div>-->
+<!--                        </div>-->
+<!--                      </li>-->
+<!--                    </ul>-->
+<!--                    <a :href="url" class="more">查看更多</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="com">-->
+<!--              <div class="com-box">-->
+<!--                &lt;!&ndash;<div class="note-lab"><span class="active">我的问答</span><span>精选问答</span></div>&ndash;&gt;-->
+<!--                <div class="note-item-cont">-->
+<!--                  <div class="my-note">-->
+<!--                    <div class="evaluate">-->
+<!--                      <div class="eva-top">-->
+<!--                        <div class="tit">课程评分 </div>-->
+<!--                        <div class="star">-->
+<!--                          <div class="score"><i>5</i></div>-->
+<!--                        </div><span class="star-score"> <i>5</i> 分</span></div>-->
+<!--                      <div class="eva-cont">-->
+<!--                        <div class="tit">学员评语 </div>-->
+<!--                        <div class="text-box">-->
+<!--                          <textarea class="form-control" rows="5" placeholder="扯淡、吐槽、表扬、鼓励......想说啥说啥！"></textarea>-->
+<!--                          <div class="text-right"><span>发表评论</span></div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;<div class="textarea-box">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<input type="text" class="ask-title" value="" placeholder="请输入问题标题">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<textarea name="my-note" id=""  placeholder="请输入问题描述"></textarea>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<div class="info"><span class="pic" onclick="screenshot()">截图 </span><span class="not-but">保存</span></div>&ndash;&gt;-->
+<!--                    &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                    <ul class="my-item-box">-->
+<!--                      <li>-->
+<!--                        <div>-->
+<!--                          <span><img src="/static/images/asset-vid.png" alt=""></span>-->
+<!--                          <span class="name">王老师</span>-->
+<!--                          <div class="item-rit">-->
+<!--                            <div class="star-show">-->
+<!--                              <div class="score"><i>4</i></div>-->
+<!--                            </div>-->
+<!--                            <div class="showSt">评分 <span>5星</span></div>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="cont">-->
+<!--                          课程内容 消息回复接口（图文,语音消息的自动回复） 素材管理接口（图片上传） 自定义菜单接口（菜单的创建，查询，删除）-->
+<!--                        </div>-->
+<!--                        <div class="operation"><span>2017-2-23</span>-->
+<!--                          <div class="oper-box"></div>-->
+<!--                        </div>-->
+<!--                      </li>-->
+<!--                    </ul>-->
+<!--                    <a :href="url" class="more">查看更多</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
             <!--课程计划部分代码-->
             <div class="navCont">
@@ -307,8 +307,8 @@ export default {
     },
     mounted () {
       // 播放测试
-      // this.playvideo("http://video.xuecheng.com/video/hls/lucene.m3u8")
-      // this.playvideo('http://video.xuecheng.com/video/c/5/c5c75d70f382e6016d2f506d134eee11/hls/c5c75d70f382e6016d2f506d134eee11.m3u8')
+      // this.playvideo("http://video.ruitong.com/video/hls/lucene.m3u8")
+      // this.playvideo('http://video.ruitong.com/video/c/5/c5c75d70f382e6016d2f506d134eee11/hls/c5c75d70f382e6016d2f506d134eee11.m3u8')
 
       $(function () {
         $('.active-box span').click(function () {
