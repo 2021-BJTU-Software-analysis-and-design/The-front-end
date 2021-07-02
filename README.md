@@ -54,7 +54,7 @@
 >xc-service-ucenter-auth				用户认证中心jwt服务(端口40400)
 
 + ## 项目运行及部署
-    — 安装mysql，mongodb，redis，elasticsearch，nginx，ruby，rabbitMQ，ffmpeg. logstash
+    - 安装mysql，mongodb，redis，elasticsearch，nginx，ruby，rabbitMQ，ffmpeg. logstash
     - 将db里的数据库文件导入到数据库里
     - 将config里的配置文件放到相应的目录里，并修改部分配置文件，将一些路径修改为相应的文件路径。
     - 运行mysql，mongodb，redis，elasticsearch，nginx，ruby，rabbitMQ，ffmpeg, logstash
