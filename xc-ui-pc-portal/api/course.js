@@ -14,7 +14,7 @@ export const search_course = (page,size,params) => {
   return http.requestQuickGet(apiURL+"/search/course/list/"+page+"/"+size+"?"+querys);
 }
 /*获取分类*/
-export const sysres_category = () => {
+export const sys_res_category = () => {
   return http.requestQuickGet(staticURL+"/category/category.json");
 }
 

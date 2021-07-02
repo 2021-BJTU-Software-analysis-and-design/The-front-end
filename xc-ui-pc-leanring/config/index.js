@@ -8,7 +8,7 @@ module.exports = {
   dev: {
 
     // Paths
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'D:/java_program/xuecheng-project-ui/xc-ui-pc-leanring/static',
     assetsPublicPath: '/',
     //proxyTable: proxyConfig.proxyList,
     proxyTable: {

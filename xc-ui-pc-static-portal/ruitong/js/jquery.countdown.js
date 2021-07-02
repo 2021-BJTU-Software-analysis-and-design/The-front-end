@@ -22,7 +22,7 @@
 (function(factory) {
     "use strict";
     if (typeof define === "function" && define.amd) {
-        define([ "xc-ui-pc-static-portal/ruitong/js/jquery" ], factory);
+        define([ "jquery" ], factory);
     } else {
         factory(jQuery);
     }

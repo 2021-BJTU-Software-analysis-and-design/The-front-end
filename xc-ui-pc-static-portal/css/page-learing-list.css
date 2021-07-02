@@ -233,7 +233,7 @@ footer dd {
  */
 .learing-list {
   width: 100%;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .learing-list ul, .learing-list li {
@@ -364,11 +364,13 @@ footer dd {
 
 .list-cont-left .content-list .recom-item {
   padding-bottom: 20px;
-  background: #fff;
+  background: #2da1e7;
   margin-bottom: 15px;
   width: 23.5%;
   margin-left: 1.9%;
   float: left;
+  border: #2da1e7;
+  border: 10px;
 }
 
 .list-cont-left .content-list .recom-item p {

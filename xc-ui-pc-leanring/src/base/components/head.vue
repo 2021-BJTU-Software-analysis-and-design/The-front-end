@@ -50,10 +50,22 @@
               <li>
                 <i class="fas fa-user"></i>
                 <span v-if="logined" >
-                  <a href="http://ucenter.xuecheng.com/#/">亲爱的 {{user}} 您好</a>
+                  <a>亲爱的 {{user}} 您好</a>
                   <a v-on:click="logout"> 退出登录</a>
                 </span>
-                <a class="warning" href="http://ucenter.xuecheng.com/#/login" v-else>登录/注册</a>
+                <a href="http://ucenter.xuecheng.com/#/login" v-else>登录/注册</a>
+              </li>
+              <li v-if="logined">
+                <i class="fas fa-user"></i>
+                <a href="http://ucenter.xuecheng.com/#/">个人中心</a>
+              </li>
+              <li>
+                <i class="fas fa-user-circle"></i>
+                <a href="http://teacher.xuecheng.com/">课程管理</a>
+              </li>
+              <li>
+                <i class="fas fa-user-clock"></i>
+                <a href="http://cms.xuecheng.com/">系统管理</a>
               </li>
             </ul>
           </div>
@@ -89,7 +101,7 @@
                     </li>
                     <li class="dropdown"><a href="#">课程中心</a>
                       <ul>
-                        <li><a class="warning" href="#">课程内容</a></li>
+                        <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
                       </ul>
                     </li>
                     <li><a href="http://www.xuecheng.com/gallery.html">作品案例</a></li>
@@ -155,7 +167,7 @@
                 </li>
                 <li class="dropdown"><a href="#">课程中心</a>
                   <ul>
-                    <li><a class="warning" href="#">课程内容</a></li>
+                    <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
                   </ul>
                 </li>
                 <li><a href="http://www.xuecheng.com/gallery.html">作品案例</a></li>
@@ -247,7 +259,7 @@ export default {
         keyword: '',
         LoginFormVisible: false,
         logined: false,
-        user:'',
+        user:'xxx',
         isShowSearch:false
       }
     },
@@ -296,7 +308,6 @@ export default {
   @import './../../../static/plugins/normalize-css/normalize.css';
   /*@import './../../../static/plugins/bootstrap/dist/css/bootstrap.css';*/
   @import './../../../static/css/page-header.css';
-  /*@import '../../../static/css/style.css';*/
   /*@import '../../../static/css/responsive.css';*/
   /*@import '../../../static/css/jquery.growl.css';*/
 </style>

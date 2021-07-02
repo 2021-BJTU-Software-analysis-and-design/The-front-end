@@ -151,7 +151,40 @@
   </footer>
 </template>
 <script>
+// import '../static/js/jquery.js'
+// import '../static/js/jquery-ui'
+// import '../static/js/popper.min.js'
+// import '../static/js/bootstrap.min.js'
+// import '../static/js/owl.js'
+// import '../static/js/wow.js'
+// import '../static/js/validation.js'
+// import '../static/js/jquery.fancybox.js'
+// import '../static/js/appear.js'
+// import '../static/js/parallax.min.js'
+// import '../static/js/jquery.growl.js'
+// import '../static/js/script.js'
+
 export default {
+  head:{
+    link:[
+      {rel: 'stylesheet',href: '../static/css/style.css'},
+      {rel: 'stylesheet',href: '../static/css/responsive.css'},
+      {rel: 'stylesheet',href: '../static/css/jquery.growl.css'},
+    ],
+    script:[
+      {src:'../static/js/script.js'},
+      {src:'../static/js/parallax.min.js'},
+      {src:'../static/js/jquery.js'},
+      {src:'../static/js/popper.min.js'},
+      {src:'../static/js/bootstrap.min.js'},
+      {src:'../static/js/owl.js'},
+      {src:'../static/js/jquery.growl.js'},
+      {src:'../static/js/parallax.min.js'},
+      {src:'../static/js/wow.js'},
+      {src:'../static/js/jquery.fancybox.js'},
+      {src:'../static/js/validation.js'},
+    ]
+  },
 }
 </script>
 <style scoped>

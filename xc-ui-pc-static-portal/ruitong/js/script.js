@@ -1,4 +1,4 @@
-export function script($) {
+(function($) {
 
 	"use strict";
 
@@ -613,4 +613,4 @@ export function script($) {
 	});
 
 
-};
+})(window.jQuery);

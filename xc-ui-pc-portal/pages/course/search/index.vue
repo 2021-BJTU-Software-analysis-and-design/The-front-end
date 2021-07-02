@@ -1,6 +1,10 @@
 <template>
   <div>
     <div class="learing-list">
+      <div class="myInput">
+      <div class="input-search"><el-input v-model="searchKeyword" ></el-input></div>
+      <div class="searchword"><el-button >搜索</el-button></div>
+      </div>
       <div class="list-box">
         <ul>
           <li>关键字：</li>
@@ -126,14 +130,14 @@
                 <!-- 渲染课程信息 -->
                 <div class="recom-item" v-for="(course, index) in courselist">
                   <nuxt-link :to="'/course/detail/'+course.id+'.html'" target="_blank">
-                    <div v-if="course.pic">
+                    <div v-if="!course.pic">
                       <p>
                         <img :src="imgUrl+'/'+course.pic" width="100%" alt />
                       </p>
                     </div>
                     <div v-else>
                       <p>
-                        <img src="/img/widget-demo1.png" width="100%" alt />
+                        <img src="/static/img/nonepic.png" width="100%" alt />
                       </p>
                     </div>
                     <ul>
@@ -171,51 +175,6 @@
             ></el-pagination>
           </div>
         </div>
-        <div class="col-md-3 list-row-rit">
-          <div class="list-cont-right">
-            <!--精品推荐-->
-            <!--#include virtual="/include/BestTop.html"-->
-            <!--精品推荐结束-->
-            <!--猜你喜欢开始-->
-            <div class="right-box">
-              <div class="tit">猜你喜欢</div>
-              <div class="contList">
-                <div
-                  class="contList-titB"
-                >通过对ThinkPHP框架基础，带领大家由浅入深轻松掌握ThinkPHP的理论基础，更加全面的掌握ThinkPHP框架运行机制……</div>
-                <div class="contList-item">
-                  <p>Think PHP 5.0 博客系统实战项目演练</p>
-                  <li>
-                    <span>高级</span>
-                    <em>·</em> 1125人在学习
-                  </li>
-                </div>
-                <div class="contList-item">
-                  <p>Think PHP 5.0 博客系统实战项目演练</p>
-                  <li>
-                    <span>高级</span>
-                    <em>·</em> 1125人在学习
-                  </li>
-                </div>
-                <div class="contList-item">
-                  <p>Think PHP 5.0 博客系统实战项目演练</p>
-                  <li>
-                    <span>高级</span>
-                    <em>·</em> 1125人在学习
-                  </li>
-                </div>
-                <div class="contList-item">
-                  <p>Think PHP 5.0 博客系统实战项目演练</p>
-                  <li>
-                    <span>高级</span>
-                    <em>·</em> 1125人在学习
-                  </li>
-                </div>
-              </div>
-            </div>
-            <!--猜你喜欢结束-->
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -224,17 +183,17 @@
 //配置文件
 let config = require("~/config/sysConfig");
 import querystring from "querystring";
-import * as courseApi from "~/api/course";
+import {search_course,sys_res_category} from "~/api/course";
 export default {
   head() {
     return {
-      title: "传智播客-一样的教育,不一样的品质",
+      title: "睿瞳科技| 睿瞳官网| 睿瞳系统| 人工智能平台| 企业级管理系统| 少儿科技 |少儿培养",
       meta: [
         { charset: "utf-8" },
         {
           name: "description",
           content:
-            "传智播客专注IT培训,Java培训,Android培训,安卓培训,PHP培训,C++培训,网页设计培训,平面设计培训,UI设计培训,移动开发培训,网络营销培训,web前端培训,云计算大数据培训,全栈工程师培训,产品经理培训。"
+            "睿瞳科技 是一个 致力于青少年人工智能方面培养， 致力于打造最好用的少儿人工智能的公司 。她也适合新手朋友练手 。同时具备， 界面简洁美观、高效、安全、源码可控、版本迭代快、免费技术交流群 等特点。"
         },
         { name: "keywords", content: this.keywords }
       ],
@@ -247,7 +206,9 @@ export default {
           rel: "stylesheet",
           href: "/static/plugins/bootstrap/dist/css/bootstrap.css"
         },
-        { rel: "stylesheet", href: "/static/css/page-learing-list.css" }
+        { rel: "stylesheet", href: "/static/css/page-learing-list.css" },
+
+        { rel: 'stylesheet', href: '/static/css/page-header.css' },
       ]
     };
   },
@@ -262,9 +223,9 @@ export default {
     }
     console.log(page);
     //请求搜索服务，搜索服务
-    let course_data = await courseApi.search_course(page, 2, route.query);
+    let course_data = await search_course(page, 10, route.query);
     console.log(course_data);
-    let category_data = await courseApi.sysres_category();
+    let category_data = await sys_res_category();
     console.log(category_data)
     if (course_data && course_data.queryResult) {
       let keywords = "";
@@ -341,7 +302,8 @@ export default {
       imgUrl: config.imgUrl,
       total: 0, //总记录数
       page: 1, //页码
-      page_size: 2 //每页显示个数
+      page_size: 10, //每页显示个数
+      searchKeyword:''
     };
   },
   watch: {
@@ -395,5 +357,28 @@ a {
 }
 .eslight {
   color: #990000;
+}
+
+.myInput{
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.myInput .input-search{
+  position: relative;
+  width: 546px;
+  display: inline-block;
+  margin-left: 30% ;
+
+}
+
+.myInput .searchword{
+  width: 108px;
+  height: 44px;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
 }
 </style>

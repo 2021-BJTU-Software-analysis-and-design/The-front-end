@@ -10,8 +10,8 @@
   import base64 from 'js-base64'
   import utilApi from './common/utils'
   import '../static/css/style.css'
-  // import '../static/css/font-awesome-all.css'
-  // import '../static/css/animate.css'
+  import '../static/css/font-awesome-all.css'
+  import '../static/css/animate.css'
   import '../static/css/responsive.css'
   import '../static/css/jquery.growl.css'
   import '../static/js/jquery.js'
@@ -75,6 +75,13 @@ export default {
 </script>
 
 <style>
+/*@import "../static/css/font-awesome-all.css";*/
+@import url("../static/css/font-awesome-all.css");
+/*@import "../static/fonts/fa-brands-400.woff2";*/
+/*@import "../static/fonts/fa-regular-400.woff2";*/
+/*@import "../static/fonts/fa-solid-900.woff2";*/
+/*@import "../static/fonts/Flaticon.woff2";*/
+
   * {
     -webkit-user-select:text;
   }
@@ -84,4 +91,5 @@ export default {
     height: 1500px;
   }
   }
+
 </style>

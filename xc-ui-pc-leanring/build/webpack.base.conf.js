@@ -29,11 +29,11 @@ module.exports = {
       '@': resolve('src'),
       'scss_vars': '@/statics/css/vars.scss',
       'jquery':'static/js/jquery.js',
-      // 'popper':'static/js/popper.min.js',
-      // 'bootstrap':'static/js/bootstrap.min.js',
-      // 'owl':'static/js/owl.js',
-      // 'wow':'static/js/wow.js',
-      // 'parallax':'static/js/parallax.min.js',
+      'popper':'static/js/popper.min.js',
+      'bootstrap':'static/js/bootstrap.min.js',
+      'owl':'static/js/owl.js',
+      'wow':'static/js/wow.js',
+      'parallax':'static/js/parallax.min.js',
       'script':resolve('static/js/script.js')
     }
   },

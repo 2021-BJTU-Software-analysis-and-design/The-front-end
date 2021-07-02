@@ -57,14 +57,14 @@
 
 /* use style sheet */
 
-@import url(font-awesome-all.css);
-@import url(flaticon.css);
-@import url(owl.css);
-@import url(bootstrap.css);
-@import url(jquery.fancybox.min.css);
-@import url(animate.css);
-@import url(jquery-ui.css);
-@import url(jquery.bootstrap-touchspin.css);
+@import url(../css/font-awesome-all.css);
+@import url(../css/flaticon.css);
+@import url(../css/owl.css);
+@import url(../css/bootstrap.css);
+@import url(../css/jquery.fancybox.min.css);
+@import url(../css/animate.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/jquery.bootstrap-touchspin.css);
 
 
 

@@ -1,372 +1,287 @@
-<!--<template>-->
-<!--  &lt;!&ndash;头部导航&ndash;&gt;-->
-<!--  <header>-->
-<!--    <div class="learingHeader">-->
-<!--      <nav class="navbar">-->
-<!--        <div class="">-->
-<!--          <div class="logo"><img src="/static/img/asset-logoIco.png" width="195" height="42" alt=""></div>-->
-<!--          <div class="nav-list">-->
-<!--            <ul class="nav navbar-nav">-->
-<!--              <li ><a href="/">首页</a></li>-->
-<!--              <li><nuxt-link  class="title-link" to="/course/search">课程</nuxt-link></li>-->
-<!--              <li><a href="#">职业规划</a></li>-->
-<!--              <li></li>-->
-<!--            </ul>-->
-<!--          </div>-->
-
-<!--          <div class="sign-in">-->
-<!--            &lt;!&ndash; 未登录 &ndash;&gt;-->
-<!--            &lt;!&ndash; <a href="#">登录 </a> <span> | </span> <a href="#"> 注册</a>&ndash;&gt;-->
-<!--            &lt;!&ndash; 登录 &ndash;&gt;-->
-<!--           &lt;!&ndash; <a href="#" class="personal"><span class="personalIco"></span>消息</a>-->
-<!--            <a href="#" class="personal">购物车</a>-->
-<!--            <a href="#" class="myInfo"><img src="/static/img/asset-myImg.jpg" alt="">个人中心</a>&ndash;&gt;-->
-<!--            <a href="http://ucenter.xuecheng.com/" class="personal" target="_blank">我的学习</a>-->
-<!--            <a href="javascript:;" @click="logout" v-if="logined == true">退出</a>-->
-<!--            <a href="javascript:;" @click="showlogin" v-if="logined == false">登陆&nbsp;|&nbsp;注册</a>-->
-<!--            <el-dialog title="登陆|注册" :visible.sync="LoginFormVisible">-->
-<!--              <login-form></login-form>-->
-<!--            </el-dialog>-->
-<!--            <a href="http://teacher.xuecheng.com/" class="personal" target="_blank">教学提供方</a>-->
-<!--            <a href="http://system.xuecheng.com/" class="personal" target="_blank">系统后台</a>-->
-<!--          </div>-->
-<!--          <div class="starch">-->
-<!--            <div><input type="text" class="input-search" v-model="keyword" @keyup.enter="search"  placeholder="输入查询关键词"></div>-->
-<!--            <div class="searchword"><a @click="search">搜索</a> </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </nav>-->
-<!--    </div>-->
-<!--  </header>-->
-<!--</template>-->
-<!--<script>-->
-<!--  import utilApi from '~/api/utils'-->
-<!--  import loginForm from '~/components/loginForm.vue'-->
-<!--  export default {-->
-<!--    components:{-->
-<!--      loginForm-->
-<!--    },-->
-<!--    head: {-->
-<!--      link: [-->
-<!--        { rel: 'stylesheet', href: '/static/plugins/normalize-css/normalize.css"' },-->
-<!--        { rel: 'stylesheet', href: '/static/plugins/bootstrap/dist/css/bootstrap.css' },-->
-<!--        { rel: 'stylesheet', href: '/static/css/page-learing-index.css' },-->
-<!--        { rel: 'stylesheet', href: '/static/css/page-header.css' },-->
-<!--      ]-->
-<!--    },-->
-<!--    data() {-->
-<!--      return {-->
-<!--        keyword: '',-->
-<!--        logined:false,-->
-<!--        LoginFormVisible:false-->
-<!--      }-->
-<!--    },-->
-<!--    methods:{-->
-<!--      search() {-->
-<!--        if (this.keyword === '') {-->
-<!--          this.$router.push(`/course/search`)-->
-<!--        } else {-->
-<!--          let keyword = encodeURIComponent(this.keyword)-->
-<!--          this.$router.push(`/course/search?keyword=`+keyword)-->
-<!--        }-->
-<!--      },-->
-<!--//退出登录-->
-<!--      logout: function () {-->
-<!--        this.$confirm('确认退出吗?', '提示', {-->
-<!--        }).then(() => {-->
-<!--          //跳转到统一登陆-->
-<!--          window.location = "http://ucenter.xuecheng.com/#/logout"-->
-<!--        }).catch(() => {-->
-
-<!--        });-->
-<!--      },-->
-<!--      refresh_user:function(){-->
-<!--        let activeUser= utilApi.checkActiveUser();-->
-
-<!--        if(activeUser){-->
-<!--          this.logined = true-->
-<!--          this.user = activeUser;-->
-<!--          //console.log(this.user.username)-->
-<!--        }else{-->
-<!--          //this.showlogin()-->
-<!--        }-->
-<!--      },-->
-<!--      showlogin:function(){-->
-<!--        this.returnUrl = window.location;-->
-<!--        this.LoginFormVisible = true;-->
-<!--      }-->
-<!--    },-->
-<!--    mounted() {-->
-<!--      this.refresh_user()-->
-
-<!--    }-->
-<!--  }-->
-<!--</script>-->
-<!--<style lang="postcss">-->
-
-<!--</style>-->
 <template>
 
-  <header class="main-header">
-    <div class="header-top">
-      <div class="container">
-        <div class="inner-container clearfix">
-          <div class="header-info pull-right">
-            <ul class="info-list">
-              <li>
-                <i class="fas fa-phone"></i>
-                <a href="tel:010-82314879"> 010-82314879</a>
-              </li>
-              <li>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:yang_cissy@163.com">yang_cissy@163.com</a>
-              </li>
-              <li>
-                <i class="fas fa-user"></i>
-                <a class="warning" href="#">登录/注册</a>
-              </li>
-            </ul>
+    <div>
+
+      <div class="preloader"></div>
+
+      <div class="wraper_flyout_search">
+        <div class="table">
+          <div class="table-cell">
+            <div class="flyout-search-layer"></div>
+            <div class="flyout-search-layer"></div>
+            <div class="flyout-search-layer"></div>
+            <div class="flyout-search-close">
+              <span class="flyout-search-close-line"></span>
+              <span class="flyout-search-close-line"></span>
+            </div>
+            <div class="flyout_search">
+              <div class="flyout-search-title">
+                <h4>搜索</h4>
+              </div>
+              <div class="flyout-search-bar">
+                <form role="search" method="get" action="#">
+                  <div class="form-row">
+                    <input type="search" placeholder="想搜点什么呢？" value="" name="s" required="" v-model="keyword">
+                    <button type="submit" v-on:click="search"><i class="fa fa-search warning"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="header-bottom">
-      <div class="container">
-        <div class="clearfix">
-          <div class="logo-box pull-left">
-            <figure class="logo"><a href="index.html"><img src="static/images/logo.png" alt=""></a></figure>
+      <header class="main-header">
+
+
+        <div class="header-top">
+          <div class="container">
+            <div class="inner-container clearfix">
+              <div class="header-info pull-right">
+                <ul class="info-list">
+                  <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:010-82314879"> 010-82314879</a>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:yang_cissy@163.com">yang_cissy@163.com</a>
+                  </li>
+                  <li>
+                    <i class="fas fa-user"></i>
+                    <span v-if="logined" >
+                  <a href="http://ucenter.xuecheng.com/#/">亲爱的 {{user}} 您好</a>
+                  <a v-on:click="logout"> 退出登录</a>
+                  </span>
+                    <a href="http://ucenter.xuecheng.com/#/login" v-else>登录/注册</a>
+                  </li>
+                  <li v-if="logined">
+                    <i class="fas fa-user"></i>
+                    <a href="http://ucenter.xuecheng.com/#/">个人中心</a>
+                  </li>
+                  <li>
+                    <i class="fas fa-user-circle"></i>
+                    <a href="http://teacher.xuecheng.com/">课程管理</a>
+                  </li>
+                  <li>
+                    <i class="fas fa-user-clock"></i>
+                    <a href="http://cms.xuecheng.com/">系统管理</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="nav-outer pull-right clearfix">
-            <div class="menu-area">
-              <nav class="main-menu navbar-expand-lg">
-                <div class="navbar-header">
-                  <!-- Toggle Button -->
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
+        </div>
+
+        <div class="header-bottom">
+          <div class="container">
+            <div class="clearfix">
+              <div class="logo-box pull-left">
+                <figure class="logo"><a href="http://www.xuecheng.com/index.html"><img src="static/images/logo.png" alt=""></a></figure>
+              </div>
+              <div class="nav-outer pull-right clearfix">
+                <div class="menu-area">
+                  <nav class="main-menu navbar-expand-lg">
+                    <div class="navbar-header">
+                      <!-- Toggle Button -->
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    </div>
+                    <div class="navbar-collapse collapse clearfix">
+                      <ul class="navigation clearfix">
+                        <li class="current"><a href="http://www.xuecheng.com/index.html">首页</a></li>
+                        <li class="dropdown"><a href="#">解决方案</a>
+                          <ul>
+                            <li><a class="warning" href="#">产品介绍</a></li>
+                            <li><a class="warning" href="#">在线模拟器</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">课程中心</a>
+                          <ul>
+                            <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="http://www.xuecheng.com/gallery.html">作品案例</a></li>
+                        <li class="dropdown"><a href="#">赛事平台</a>
+                          <ul>
+                            <li><a class="warning" href="#">少年硅谷</a></li>
+                            <li><a class="warning" href="#">大开眼界</a></li>
+                            <li><a class="warning" href="#">计算机表演赛</a></li>
+                            <li><a class="warning" href="#">智慧海洋</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">新闻动态</a>
+                          <ul>
+                            <li><a class="warning" href="#">新闻动态</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="http://www.xuecheng.com/contact.html">联系我们</a>
+                          <!--                                            <ul>-->
+                          <!--                                                <li><a class="warning" href="#">合作咨询</a></li>-->
+                          <!--                                            </ul>-->
+                        </li>
+                        <!--                                        <li><a href="contact.html">技术与支持</a></li>-->
+                      </ul>
+                    </div>
+                  </nav>
                 </div>
-                <div class="navbar-collapse collapse clearfix">
-                  <ul class="navigation clearfix">
-                    <li class="current"><a href="index.html">首页</a></li>
-                    <li class="dropdown"><a href="#">解决方案</a>
-                      <ul>
-                        <li><a class="warning" href="#">产品介绍</a></li>
-                        <li><a class="warning" href="#">在线模拟器</a></li>
-                      </ul>
+                <div class="outer-box">
+                  <ul class="outer-content">
+                    <li class="header-flyout-searchbar">
+                      <i class="fa fa-search"></i>
                     </li>
-                    <li class="dropdown"><a href="#">课程中心</a>
-                      <ul>
-                        <li><a class="warning" href="#">课程内容</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="gallery.html">作品案例</a></li>
-                    <li class="dropdown"><a href="#">赛事平台</a>
-                      <ul>
-                        <li><a class="warning" href="#">少年硅谷</a></li>
-                        <li><a class="warning" href="#">大开眼界</a></li>
-                        <li><a class="warning" href="#">计算机表演赛</a></li>
-                        <li><a class="warning" href="#">智慧海洋</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">新闻动态</a>
-                      <ul>
-                        <li><a class="warning" href="#">新闻动态</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="contact.html">联系我们</a>
-                      <!--                                            <ul>-->
-                      <!--                                                <li><a class="warning" href="#">合作咨询</a></li>-->
-                      <!--                                            </ul>-->
-                    </li>
-                    <!--                                        <li><a href="contact.html">技术与支持</a></li>-->
+                    <!-- <li><a href="shop.html"><i class="fas fa-shopping-cart"></i></a></li>-->
                   </ul>
                 </div>
-              </nav>
-            </div>
-            <div class="outer-box">
-              <ul class="outer-content">
-                <li class="header-flyout-searchbar">
-                  <i class="fa fa-search"></i>
-                </li>
-                <!-- <li><a href="shop.html"><i class="fas fa-shopping-cart"></i></a></li>-->
-              </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+<!--        &lt;!&ndash;Sticky Header 粘附式头部&ndash;&gt;-->
+<!--        <div class="sticky-header">-->
+<!--          <div class="container clearfix">-->
+<!--            <figure class="logo-box"><a href="http://www.xuecheng.com/index.html"><img src="static/images/small-logo.png" alt="睿瞳科技"></a></figure>-->
+<!--            <div class="menu-area">-->
+<!--              <nav class="main-menu navbar-expand-lg">-->
+<!--                <div class="navbar-header">-->
+<!--                  &lt;!&ndash; Toggle Button &ndash;&gt;-->
+<!--                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                  </button>-->
+<!--                </div>-->
+<!--                <div class="navbar-collapse collapse clearfix">-->
+<!--                  <ul class="navigation clearfix">-->
+<!--                    <li class="current"><a href="http://www.xuecheng.com/index.html">首页</a></li>-->
+<!--                    <li class="dropdown"><a href="#">解决方案</a>-->
+<!--                      <ul>-->
+<!--                        <li><a class="warning" href="#">产品介绍</a></li>-->
+<!--                        <li><a class="warning" href="#">在线模拟器</a></li>-->
+<!--                      </ul>-->
+<!--                    </li>-->
+<!--                    <li class="dropdown"><a href="#">课程中心</a>-->
+<!--                      <ul>-->
+<!--                        <li><a class="warning" href="#">课程内容</a></li>-->
+<!--                      </ul>-->
+<!--                    </li>-->
+<!--                    <li><a href="http://www.xuecheng.com/gallery.html">作品案例</a></li>-->
+<!--                    <li class="dropdown"><a href="#">赛事平台</a>-->
+<!--                      <ul>-->
+<!--                        <li><a class="warning" href="#">少年硅谷</a></li>-->
+<!--                        <li><a class="warning" href="#">大开眼界</a></li>-->
+<!--                        <li><a class="warning" href="#">计算机表演赛</a></li>-->
+<!--                        <li><a class="warning" href="#">智慧海洋</a></li>-->
+<!--                      </ul>-->
+<!--                    </li>-->
+<!--                    <li class="dropdown"><a href="#">新闻动态</a>-->
+<!--                      <ul>-->
+<!--                        <li><a class="warning" href="#">新闻动态</a></li>-->
+<!--                      </ul>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                      <a href="http://www.xuecheng.com/contact.html">联系我们</a>-->
+<!--                      &lt;!&ndash;                                            <ul>&ndash;&gt;-->
+<!--                      &lt;!&ndash;                                                <li><a class="warning" href="#">合作咨询</a></li>&ndash;&gt;-->
+<!--                      &lt;!&ndash;                                            </ul>&ndash;&gt;-->
+<!--                    </li>-->
+<!--                    &lt;!&ndash;                                        <li><a href="contact.html">技术与支持</a></li>&ndash;&gt;-->
+<!--                  </ul>-->
+
+<!--                </div>-->
+<!--              </nav>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+      </header>
     </div>
-
-    <!--Sticky Header 粘附式头部-->
-    <div class="sticky-header">
-      <div class="container clearfix">
-        <figure class="logo-box"><a href="index.html"><img src="static/images/small-logo.png" alt="睿瞳科技"></a></figure>
-        <div class="menu-area">
-          <nav class="main-menu navbar-expand-lg">
-            <div class="navbar-header">
-              <!-- Toggle Button -->
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="navbar-collapse collapse clearfix">
-              <ul class="navigation clearfix">
-                <li class="current"><a href="index.html">首页</a></li>
-                <li class="dropdown"><a href="#">解决方案</a>
-                  <ul>
-                    <li><a class="warning" href="#">产品介绍</a></li>
-                    <li><a class="warning" href="#">在线模拟器</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#">课程中心</a>
-                  <ul>
-                    <li><a class="warning" href="#">课程内容</a></li>
-                  </ul>
-                </li>
-                <li><a href="gallery.html">作品案例</a></li>
-                <li class="dropdown"><a href="#">赛事平台</a>
-                  <ul>
-                    <li><a class="warning" href="#">少年硅谷</a></li>
-                    <li><a class="warning" href="#">大开眼界</a></li>
-                    <li><a class="warning" href="#">计算机表演赛</a></li>
-                    <li><a class="warning" href="#">智慧海洋</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown"><a href="#">新闻动态</a>
-                  <ul>
-                    <li><a class="warning" href="#">新闻动态</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="contact.html">联系我们</a>
-                  <!--                                            <ul>-->
-                  <!--                                                <li><a class="warning" href="#">合作咨询</a></li>-->
-                  <!--                                            </ul>-->
-                </li>
-                <!--                                        <li><a href="contact.html">技术与支持</a></li>-->
-              </ul>
-
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div><!-- sticky-header end -->
-    <!--    <div class="learingHeader">-->
-    <!--      <nav class="navbar">-->
-    <!--        <div class="">-->
-    <!--          <div class="logo"><img src="/static/img/asset-logoIco.png" width="100%" alt=""></div>-->
-    <!--          <div class="nav-list">-->
-    <!--            <ul class="nav navbar-nav">-->
-    <!--              <li ><a href="http://www.xuecheng.com/">首页</a></li>-->
-    <!--              <li><a href="http://www.xuecheng.com/course/search">课程</a></li>-->
-    <!--              <li><a href="#">职业规划</a></li>-->
-    <!--              <li></li>-->
-    <!--            </ul>-->
-    <!--          </div>-->
-
-    <!--          <div class="sign-in">-->
-    <!--            &lt;!&ndash; 未登录 &ndash;&gt;-->
-    <!--            &lt;!&ndash; <a href="#">登录 </a> <span> | </span> <a href="#"> 注册</a>&ndash;&gt;-->
-    <!--            &lt;!&ndash; 登录 &ndash;&gt;-->
-    <!--           &lt;!&ndash; <a href="#" class="personal"><span class="personalIco"></span>消息</a>-->
-    <!--            <a href="#" class="personal">购物车</a>&ndash;&gt;-->
-    <!--            <router-link :to="{path: '/'}">我的学习</router-link>-->
-    <!--            <a href="javascript:;" @click="logout" v-if="logined == true">退出</a>-->
-    <!--            <a href="javascript:;" @click="showlogin" v-if="logined == false">登陆&nbsp;|&nbsp;注册</a>-->
-
-    <!--          </div>-->
-    <!--          <div class="starch">-->
-    <!--            <div><input type="text" class="input-search" v-model="keyword" @keyup.enter="search"  placeholder="输入查询关键词"></div>-->
-    <!--            <div class="searchword"><a @click="search">搜索</a> </div>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </nav>-->
-    <!--    </div>-->
-
-    <!--    <script src="../../assets/js/jquery.js"></script>-->
-    <!--    <script src="../../assets/js/popper.min.js"></script>-->
-    <!--    <script src="../../assets/js/bootstrap.min.js"></script>-->
-
-    <!--    <script src="../../assets/js/owl.js"></script>-->
-    <!--    <script src="../../assets/js/wow.js"></script>-->
-    <!--    <script src="../../assets/js/validation.js"></script>-->
-    <!--    <script src="../../assets/js/jquery.fancybox.js"></script>-->
-    <!--    <script src="../../assets/js/appear.js"></script>-->
-    <!--    <script src="../../assets/js/parallax.min.js"></script>-->
-    <!--    <script src="../../assets/js/jquery.growl.js" ></script>-->
-    <!--    &lt;!&ndash; main-js &ndash;&gt;-->
-    <!--    <script src="../../assets/js/script.js"></script>-->
-  </header>
 
 </template>
 
-<script type="text/javascript">
-// import utilApi from '../../common/utils'
-import '../static/css/style.css';
-import '../static/css/responsive.css';
-import '../static/css/jquery.growl.css';
+<script>
+import utilApi from '~/api/utils'
+import loginForm from '~/components/loginForm.vue'
+import myScript from "../static/js/myScript"
 export default {
-  components: {
-
+  components:{
+    loginForm
   },
-  data () {
+  head:{
+      title:"睿瞳科技 睿瞳官网 睿瞳系统 人工智能平台 企业级管理系统 少儿科技 少儿培养",
+      link: [
+        {rel: 'stylesheet', href: '/static/css/style.css'},
+        {rel: 'stylesheet', href: '/static/css/responsive.css'},
+        {rel: 'stylesheet', href: '/static/css/jquery.growl.css'},
+      ],
+      script: [
+        {src: '/static/js/script.js'},
+        {src: '/static/js/parallax.min.js'},
+        {src: '/static/js/jquery.js'},
+        {src: '/static/js/popper.min.js'},
+        {src: '/static/js/bootstrap.min.js'},
+        {src: '/static/js/owl.js'},
+        {src: '/static/js/jquery.growl.js'},
+        {src: '/static/js/parallax.min.js'},
+        {src: '/static/js/wow.js'},
+        {src: '/static/js/jquery.fancybox.js'},
+        {src: '/static/js/validation.js'},
+      ]
+  },
+  data() {
     return {
       keyword: '',
       LoginFormVisible: false,
-      logined: false
+      logined: true,
+      user:'xx',
+      isShowSearch:false
     }
   },
-  methods: {
-    search () {
+  methods:{
+    search() {
       if (this.keyword === '') {
-        window.location = 'http://www.xuecheng.com/course/search'
+        this.$router.push(`/course/search`)
       } else {
         let keyword = encodeURIComponent(this.keyword)
-        window.location = 'http://www.xuecheng.com/course/search?keyword=' + keyword
+        this.$router.push(`/course/search?keyword=`+keyword)
       }
     },
-    // 退出登录
+//退出登录
     logout: function () {
       this.$confirm('确认退出吗?', '提示', {
       }).then(() => {
-        // 跳转到统一登陆
-        this.$router.push({ path: '/logout'})
+        //跳转到统一登陆
+        window.location = "http://ucenter.xuecheng.com/#/logout"
       }).catch(() => {
 
-      })
+      });
     },
-    refresh_user: function () {
-      let activeUser = utilApi.getActiveUser()
+    refresh_user:function(){
+      let activeUser= utilApi.checkActiveUser();
 
-      if (activeUser) {
+      if(activeUser){
         this.logined = true
-        this.user = activeUser
-        // console.log(this.user.username)
-      } else {
-        // this.showlogin()
+        this.user = activeUser;
+        //console.log(this.user.username)
+      }else{
+        //this.showlogin()
       }
     },
-    showlogin: function () {
-      // this.loginFormVisible = true;
-      window.location = 'http://ucenter.xuecheng.com/#/login?returnUrl=' +
-        Base64.encode(window.location)
+    showlogin:function(){
+      this.returnUrl = window.location;
+      this.LoginFormVisible = true;
     }
   },
-  mounted () {
-    this.refresh_user()
+  mounted() {
+    this.refresh_user();
+    myScript();
   }
 }
 </script>
-<style >
-@import './../../../static/plugins/normalize-css/normalize.css';
-/*@import './../../../static/plugins/bootstrap/dist/css/bootstrap.css';*/
-@import './../../../static/css/page-header.css';
-/*@import '../../../static/css/style.css';*/
-/*@import '../../../static/css/responsive.css';*/
-/*@import '../../../static/css/jquery.growl.css';*/
+<style lang="postcss">
+
 </style>

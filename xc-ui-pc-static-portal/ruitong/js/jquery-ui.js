@@ -7,7 +7,7 @@
 	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
-		define([ "xc-ui-pc-static-portal/ruitong/js/jquery" ], factory );
+		define([ "jquery" ], factory );
 	} else {
 
 		// Browser globals

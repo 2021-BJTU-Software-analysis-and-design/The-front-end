@@ -41,9 +41,9 @@
                         <h4>搜索</h4>
                     </div>
                     <div class="flyout-search-bar">
-                        <form role="search" method="get" action="#">
+                        <form role="search" method="get" action="http://www.xuecheng.com/course/search">
                             <div class="form-row">
-                                <input type="search" placeholder="想搜点什么呢？" value="" name="s" required="">
+                                <input type="search" placeholder="想搜点什么呢？" value="" name="keyword" required="" id="searchKeyword">
                                 <button type="submit"><i class="fa fa-search warning"></i></button>
                             </div>
                         </form>
@@ -72,7 +72,15 @@
                             </li>
                             <li>
                                 <i class="fas fa-user"></i>
-                                <a class="warning" href="#">登录/注册</a>
+                                <a href="http://ucenter.xuecheng.com/#/login">登录/注册</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-circle"></i>
+                                <a href="http://teacher.xuecheng.com/">课程管理</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-clock"></i>
+                                <a href="http://cms.xuecheng.com/">系统管理</a>
                             </li>
                         </ul>
                     </div>
@@ -108,7 +116,7 @@
                                         </li>
                                         <li class="dropdown"><a href="#">课程中心</a>
                                             <ul>
-                                                <li><a class="warning" href="#">课程内容</a></li>
+                                                <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="gallery.html">作品案例</a></li>
@@ -172,9 +180,9 @@
                                         <li><a class="warning" href="#">在线模拟器</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">课程中心</a>
+                                <li class="dropdown"><a href="http://www.xuecheng.com/course/search">课程中心</a>
                                     <ul>
-                                        <li><a class="warning" href="#">课程内容</a></li>
+                                        <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="gallery.html">作品案例</a></li>
@@ -736,7 +744,12 @@
     <i class="fa fa-arrow-up"></i>
 </button>
 
-
+<script>
+    function search() {
+        var keyword = document.getElementById("searchKeyword");
+        window.location.href = 'http://www.xuecheng.com/coures/search?keyword='+keyword;
+    }
+</script>
 
 <!-- jequery plugins -->
 <script src="js/jquery.js"></script>

@@ -21,7 +21,7 @@
               </el-form>
                 </el-tab-pane>
                 <el-tab-pane label="用户注册" name="register">
-                  建设中..
+                  <register></register>
                 </el-tab-pane>
               </el-tabs>
             </div>
@@ -37,11 +37,11 @@
 
 import utilApi from '../../common/utils';
 import * as loginApi from '../api/login';
-
+import register from "../../module/home/page/register";
 import Vue from 'vue'
 export default {
 	components:{
-
+	  register
 	},
   data() {
     return {

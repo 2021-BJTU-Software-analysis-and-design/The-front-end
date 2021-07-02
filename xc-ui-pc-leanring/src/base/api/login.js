@@ -13,5 +13,9 @@ export const logout = params => {
   return http.requestPost('/openapi/auth/userlogout');
 }
 
+export const register = params =>{
+  return http.requestPost('/api/ucenter/register',params)
+}
+
 
 

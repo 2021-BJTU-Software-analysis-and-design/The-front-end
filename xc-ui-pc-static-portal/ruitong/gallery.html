@@ -40,13 +40,13 @@
                 </div>
                 <div class="flyout_search">
                     <div class="flyout-search-title">
-                        <h4>Search</h4>
+                        <h4>搜索</h4>
                     </div>
                     <div class="flyout-search-bar">
-                        <form role="search" method="get" action="#">
+                        <form role="search" method="get" action="http://www.xuecheng.com/course/search">
                             <div class="form-row">
-                                <input type="search" placeholder="Type to search..." value="" name="s" required="">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                                <input type="search" placeholder="想搜点什么呢？" value="" name="keyword" required="" id="searchKeyword">
+                                <button type="submit"><i class="fa fa-search warning"></i></button>
                             </div>
                         </form>
                     </div>
@@ -74,7 +74,15 @@
                             </li>
                             <li>
                                 <i class="fas fa-user"></i>
-                                <a class="warning" href="#">登录/注册</a>
+                                <a href="http://ucenter.xuecheng.com/#/login">登录/注册</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-circle"></i>
+                                <a href="http://teacher.xuecheng.com/">课程管理</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-clock"></i>
+                                <a href="http://cms.xuecheng.com/">系统管理</a>
                             </li>
                         </ul>
                     </div>
@@ -101,7 +109,7 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li><a href="index.html">首页</a></li>
+                                        <li class="current"><a href="index.html">首页</a></li>
                                         <li class="dropdown"><a href="#">解决方案</a>
                                             <ul>
                                                 <li><a class="warning" href="#">产品介绍</a></li>
@@ -110,10 +118,10 @@
                                         </li>
                                         <li class="dropdown"><a href="#">课程中心</a>
                                             <ul>
-                                                <li><a class="warning" href="#">课程内容</a></li>
+                                                <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
                                             </ul>
                                         </li>
-                                        <li class="current"><a href="gallery.html">作品案例</a></li>
+                                        <li><a href="gallery.html">作品案例</a></li>
                                         <li class="dropdown"><a href="#">赛事平台</a>
                                             <ul>
                                                 <li><a class="warning" href="#">少年硅谷</a></li>
@@ -167,19 +175,19 @@
                         </div>
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                                <li ><a href="index.html">首页</a></li>
+                                <li class="current"><a href="index.html">首页</a></li>
                                 <li class="dropdown"><a href="#">解决方案</a>
                                     <ul>
                                         <li><a class="warning" href="#">产品介绍</a></li>
                                         <li><a class="warning" href="#">在线模拟器</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">课程中心</a>
+                                <li class="dropdown"><a href="http://www.xuecheng.com/course/search">课程中心</a>
                                     <ul>
-                                        <li><a class="warning" href="#">课程内容</a></li>
+                                        <li><a href="http://www.xuecheng.com/course/search">课程内容</a></li>
                                     </ul>
                                 </li>
-                                <li class="current"><a href="gallery.html">作品案例</a></li>
+                                <li><a href="gallery.html">作品案例</a></li>
                                 <li class="dropdown"><a href="#">赛事平台</a>
                                     <ul>
                                         <li><a class="warning" href="#">少年硅谷</a></li>
